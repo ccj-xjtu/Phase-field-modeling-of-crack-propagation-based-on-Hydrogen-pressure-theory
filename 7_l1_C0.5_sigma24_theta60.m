@@ -1,0 +1,709 @@
+function out = model
+%
+% l1_C05_sigma24_theta60.m
+%
+% Model exported on Mar 2 2026, 16:08 by COMSOL 6.1.0.252.
+
+import com.comsol.model.*
+import com.comsol.model.util.*
+
+model = ModelUtil.create('Model');
+
+model.modelPath(['E:\06' native2unicode(hex2dec({'67' '1f'}), 'unicode')  native2unicode(hex2dec({'52' '0a'}), 'unicode') '\1' native2unicode(hex2dec({'57' 'fa'}), 'unicode')  native2unicode(hex2dec({'4e' '8e'}), 'unicode')  native2unicode(hex2dec({'6c' '22'}), 'unicode')  native2unicode(hex2dec({'53' '8b'}), 'unicode')  native2unicode(hex2dec({'74' '06'}), 'unicode')  native2unicode(hex2dec({'8b' 'ba'}), 'unicode')  native2unicode(hex2dec({'76' '84'}), 'unicode')  native2unicode(hex2dec({'88' 'c2'}), 'unicode')  native2unicode(hex2dec({'7e' 'b9'}), 'unicode')  native2unicode(hex2dec({'62' '69'}), 'unicode')  native2unicode(hex2dec({'5c' '55'}), 'unicode')  native2unicode(hex2dec({'76' 'f8'}), 'unicode')  native2unicode(hex2dec({'57' '3a'}), 'unicode')  native2unicode(hex2dec({'6a' '21'}), 'unicode')  native2unicode(hex2dec({'62' 'df'}), 'unicode') '\' native2unicode(hex2dec({'6a' '21'}), 'unicode')  native2unicode(hex2dec({'57' '8b'}), 'unicode') '\4' native2unicode(hex2dec({'88' 'c2'}), 'unicode')  native2unicode(hex2dec({'7e' 'b9'}), 'unicode')  native2unicode(hex2dec({'89' 'd2'}), 'unicode')  native2unicode(hex2dec({'5e' 'a6'}), 'unicode') ]);
+
+model.label('0.5-24_60.mph');
+
+model.param.group.create('par6');
+model.param('par6').set('WX', '100[mm]', [native2unicode(hex2dec({'5b' 'bd'}), 'unicode')  native2unicode(hex2dec({'5e' 'a6'}), 'unicode') ]);
+model.param('par6').set('WY', '100[mm]', [native2unicode(hex2dec({'9a' 'd8'}), 'unicode')  native2unicode(hex2dec({'5e' 'a6'}), 'unicode') ]);
+model.param('par6').set('WZ', '10[mm]', [native2unicode(hex2dec({'53' '9a'}), 'unicode')  native2unicode(hex2dec({'5e' 'a6'}), 'unicode') ]);
+model.param('par6').set('I_ini', '8[mm]', [native2unicode(hex2dec({'88' 'c2'}), 'unicode')  native2unicode(hex2dec({'7e' 'b9'}), 'unicode')  native2unicode(hex2dec({'52' '1d'}), 'unicode')  native2unicode(hex2dec({'59' 'cb'}), 'unicode')  native2unicode(hex2dec({'95' '7f'}), 'unicode')  native2unicode(hex2dec({'5e' 'a6'}), 'unicode') ]);
+model.param('par6').set('l0', '1[mm]', [native2unicode(hex2dec({'88' 'c2'}), 'unicode')  native2unicode(hex2dec({'7e' 'b9'}), 'unicode')  native2unicode(hex2dec({'72' '79'}), 'unicode')  native2unicode(hex2dec({'5f' '81'}), 'unicode')  native2unicode(hex2dec({'5b' 'bd'}), 'unicode')  native2unicode(hex2dec({'5e' 'a6'}), 'unicode') ]);
+model.param('par6').set('Dd', 'WX/2', [native2unicode(hex2dec({'5b' 'bd'}), 'unicode')  native2unicode(hex2dec({'5e' 'a6'}), 'unicode')  native2unicode(hex2dec({'4e' '2d'}), 'unicode')  native2unicode(hex2dec({'5f' 'c3'}), 'unicode') ]);
+model.param('par6').set('hmax', 'l0/2', [native2unicode(hex2dec({'7f' '51'}), 'unicode')  native2unicode(hex2dec({'68' '3c'}), 'unicode')  native2unicode(hex2dec({'5c' '3a'}), 'unicode')  native2unicode(hex2dec({'5b' 'f8'}), 'unicode') ]);
+model.param('par6').set('Sv', '24[MPa]', [native2unicode(hex2dec({'7a' 'd6'}), 'unicode')  native2unicode(hex2dec({'54' '11'}), 'unicode')  native2unicode(hex2dec({'65' 'bd'}), 'unicode')  native2unicode(hex2dec({'52' 'a0'}), 'unicode')  native2unicode(hex2dec({'76' '84'}), 'unicode')  native2unicode(hex2dec({'8f' 'b9'}), 'unicode')  native2unicode(hex2dec({'75' '4c'}), 'unicode')  native2unicode(hex2dec({'5e' '94'}), 'unicode')  native2unicode(hex2dec({'52' '9b'}), 'unicode') ]);
+model.param('par6').set('Sh', '-6[MPa]', [native2unicode(hex2dec({'6a' '2a'}), 'unicode')  native2unicode(hex2dec({'54' '11'}), 'unicode')  native2unicode(hex2dec({'65' 'bd'}), 'unicode')  native2unicode(hex2dec({'52' 'a0'}), 'unicode')  native2unicode(hex2dec({'76' '84'}), 'unicode')  native2unicode(hex2dec({'8f' 'b9'}), 'unicode')  native2unicode(hex2dec({'75' '4c'}), 'unicode')  native2unicode(hex2dec({'5e' '94'}), 'unicode')  native2unicode(hex2dec({'52' '9b'}), 'unicode') ]);
+model.param('par6').set('Sn', 'Nu*(Sv+Sh)', [native2unicode(hex2dec({'57' '82'}), 'unicode')  native2unicode(hex2dec({'54' '11'}), 'unicode')  native2unicode(hex2dec({'65' 'bd'}), 'unicode')  native2unicode(hex2dec({'52' 'a0'}), 'unicode')  native2unicode(hex2dec({'76' '84'}), 'unicode')  native2unicode(hex2dec({'8f' 'b9'}), 'unicode')  native2unicode(hex2dec({'75' '4c'}), 'unicode')  native2unicode(hex2dec({'5e' '94'}), 'unicode')  native2unicode(hex2dec({'52' '9b'}), 'unicode') ]);
+model.param('par6').set('angel', 'pi/3');
+model.param.set('E0', '210[GPa]', [native2unicode(hex2dec({'67' '68'}), 'unicode')  native2unicode(hex2dec({'6c' '0f'}), 'unicode')  native2unicode(hex2dec({'6a' '21'}), 'unicode')  native2unicode(hex2dec({'91' 'cf'}), 'unicode') ]);
+model.param.set('Nu', '0.3', [native2unicode(hex2dec({'6c' 'ca'}), 'unicode')  native2unicode(hex2dec({'67' '7e'}), 'unicode')  native2unicode(hex2dec({'6b' 'd4'}), 'unicode') ]);
+model.param.set('mu', 'E0/(2*(1+Nu))', [native2unicode(hex2dec({'62' 'c9'}), 'unicode')  native2unicode(hex2dec({'68' '85'}), 'unicode')  native2unicode(hex2dec({'5e' '38'}), 'unicode')  native2unicode(hex2dec({'65' '70'}), 'unicode')  native2unicode(hex2dec({'03' 'bc'}), 'unicode') ]);
+model.param.set('lanta', 'E0*Nu/((1+Nu)*(1-2*Nu))', [native2unicode(hex2dec({'62' 'c9'}), 'unicode')  native2unicode(hex2dec({'68' '85'}), 'unicode')  native2unicode(hex2dec({'5e' '38'}), 'unicode')  native2unicode(hex2dec({'65' '70'}), 'unicode')  native2unicode(hex2dec({'03' 'bb'}), 'unicode') ]);
+model.param.set('Gc0', '2.7[N/mm]', [native2unicode(hex2dec({'65' 'ad'}), 'unicode')  native2unicode(hex2dec({'88' 'c2'}), 'unicode')  native2unicode(hex2dec({'97' 'e7'}), 'unicode')  native2unicode(hex2dec({'60' '27'}), 'unicode') ]);
+model.param.group.create('par4');
+model.param('par4').set('k', '1e-9', [native2unicode(hex2dec({'4e' '3a'}), 'unicode')  native2unicode(hex2dec({'4e' '86'}), 'unicode')  native2unicode(hex2dec({'65' '36'}), 'unicode')  native2unicode(hex2dec({'65' '5b'}), 'unicode')  native2unicode(hex2dec({'8b' 'be'}), 'unicode')  native2unicode(hex2dec({'7f' '6e'}), 'unicode')  native2unicode(hex2dec({'76' '84'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'65' '70'}), 'unicode') ]);
+model.param('par4').set('B', '1000/(1-k)', [native2unicode(hex2dec({'ff' '1f'}), 'unicode') ]);
+model.param('par4').set('fai_cr1', '0');
+model.param('par4').set('fai_cr2', '1');
+model.param('par4').set('dfai_cr', 'fai_cr2-fai_cr1');
+model.param.group.create('par7');
+model.param('par7').set('J_part', 'D*VH/R/T', [native2unicode(hex2dec({'6c' '42'}), 'unicode')  native2unicode(hex2dec({'89' 'e3'}), 'unicode') 'J' native2unicode(hex2dec({'62' '40'}), 'unicode')  native2unicode(hex2dec({'97' '00'}), 'unicode')  native2unicode(hex2dec({'76' '84'}), 'unicode')  native2unicode(hex2dec({'8f' 'c7'}), 'unicode')  native2unicode(hex2dec({'7a' '0b'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'65' '70'}), 'unicode') ]);
+model.param('par7').set('A', 'exp(-Gibbs/R/T)', [native2unicode(hex2dec({'6c' '42'}), 'unicode')  native2unicode(hex2dec({'89' 'e3'}), 'unicode')  native2unicode(hex2dec({'03' 'b8'}), 'unicode')  native2unicode(hex2dec({'62' '40'}), 'unicode')  native2unicode(hex2dec({'97' '00'}), 'unicode')  native2unicode(hex2dec({'76' '84'}), 'unicode')  native2unicode(hex2dec({'8f' 'c7'}), 'unicode')  native2unicode(hex2dec({'7a' '0b'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'65' '70'}), 'unicode') ]);
+model.param('par7').set('D', '2e-10[m^2/s]', [native2unicode(hex2dec({'6d' '53'}), 'unicode')  native2unicode(hex2dec({'5e' 'a6'}), 'unicode')  native2unicode(hex2dec({'62' '69'}), 'unicode')  native2unicode(hex2dec({'65' '63'}), 'unicode')  native2unicode(hex2dec({'7c' 'fb'}), 'unicode')  native2unicode(hex2dec({'65' '70'}), 'unicode') ]);
+model.param('par7').set('R', '8.314[J/(mol*K)]', [native2unicode(hex2dec({'6c' '14'}), 'unicode')  native2unicode(hex2dec({'4f' '53'}), 'unicode')  native2unicode(hex2dec({'5e' '38'}), 'unicode')  native2unicode(hex2dec({'65' '70'}), 'unicode') ]);
+model.param('par7').set('Gibbs', '30000[J/mol]', [native2unicode(hex2dec({'54' '09'}), 'unicode')  native2unicode(hex2dec({'5e' '03'}), 'unicode')  native2unicode(hex2dec({'65' 'af'}), 'unicode')  native2unicode(hex2dec({'81' 'ea'}), 'unicode')  native2unicode(hex2dec({'75' '31'}), 'unicode')  native2unicode(hex2dec({'80' 'fd'}), 'unicode') ]);
+model.param('par7').set('VH', '2000[mm^3/mol]', [native2unicode(hex2dec({'56' 'fa'}), 'unicode')  native2unicode(hex2dec({'6e' 'b6'}), 'unicode')  native2unicode(hex2dec({'4f' '53'}), 'unicode')  native2unicode(hex2dec({'4e' '2d'}), 'unicode')  native2unicode(hex2dec({'6c' '22'}), 'unicode')  native2unicode(hex2dec({'76' '84'}), 'unicode')  native2unicode(hex2dec({'50' '4f'}), 'unicode')  native2unicode(hex2dec({'64' '69'}), 'unicode')  native2unicode(hex2dec({'5c' '14'}), 'unicode')  native2unicode(hex2dec({'4f' '53'}), 'unicode')  native2unicode(hex2dec({'79' 'ef'}), 'unicode') ]);
+model.param('par7').set('T', '300[K]', ['26.85' native2unicode(hex2dec({'64' '44'}), 'unicode')  native2unicode(hex2dec({'6c' '0f'}), 'unicode')  native2unicode(hex2dec({'5e' 'a6'}), 'unicode') ]);
+model.param('par7').set('chi', '0.89', [native2unicode(hex2dec({'63' '5f'}), 'unicode')  native2unicode(hex2dec({'4f' '24'}), 'unicode')  native2unicode(hex2dec({'7c' 'fb'}), 'unicode')  native2unicode(hex2dec({'65' '70'}), 'unicode') ]);
+model.param('par7').set('C_ini', '0.5', [native2unicode(hex2dec({'52' '1d'}), 'unicode')  native2unicode(hex2dec({'59' 'cb'}), 'unicode')  native2unicode(hex2dec({'4f' '53'}), 'unicode')  native2unicode(hex2dec({'79' 'ef'}), 'unicode')  native2unicode(hex2dec({'6c' '22'}), 'unicode')  native2unicode(hex2dec({'79' 'bb'}), 'unicode')  native2unicode(hex2dec({'5b' '50'}), 'unicode')  native2unicode(hex2dec({'6d' '53'}), 'unicode')  native2unicode(hex2dec({'5e' 'a6'}), 'unicode')  native2unicode(hex2dec({'ff' '08'}), 'unicode')  native2unicode(hex2dec({'53' 'e6'}), 'unicode')  native2unicode(hex2dec({'4e' '00'}), 'unicode')  native2unicode(hex2dec({'90' '09'}), 'unicode')  native2unicode(hex2dec({'62' 'e9'}), 'unicode') 'wt.ppm, mol/m3' native2unicode(hex2dec({'ff' '09'}), 'unicode') '0']);
+model.param('par6').label([native2unicode(hex2dec({'51' 'e0'}), 'unicode')  native2unicode(hex2dec({'4f' '55'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'65' '70'}), 'unicode') ]);
+model.param.label([native2unicode(hex2dec({'67' '50'}), 'unicode')  native2unicode(hex2dec({'65' '99'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'65' '70'}), 'unicode') ]);
+model.param('par4').label([native2unicode(hex2dec({'76' 'f8'}), 'unicode')  native2unicode(hex2dec({'57' '3a'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'65' '70'}), 'unicode') ]);
+model.param('par7').label([native2unicode(hex2dec({'6c' '22'}), 'unicode')  native2unicode(hex2dec({'62' '69'}), 'unicode')  native2unicode(hex2dec({'65' '63'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'65' '70'}), 'unicode') ]);
+
+model.component.create('comp1', true);
+
+model.component('comp1').geom.create('geom1', 2);
+
+model.result.table.create('evl2', 'Table');
+model.result.table.create('tbl1', 'Table');
+
+model.component('comp1').func.create('an2', 'Analytic');
+model.component('comp1').func.create('an4', 'Analytic');
+model.component('comp1').func.create('an3', 'Analytic');
+model.component('comp1').func.create('int1', 'Interpolation');
+model.component('comp1').func('an2').label([native2unicode(hex2dec({'53' '8b'}), 'unicode')  native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'53' '3a'}), 'unicode')  native2unicode(hex2dec({'57' 'df'}), 'unicode')  native2unicode(hex2dec({'51' 'fd'}), 'unicode')  native2unicode(hex2dec({'65' '70'}), 'unicode') ' 1']);
+model.component('comp1').func('an2').set('funcname', 'COE_p1');
+model.component('comp1').func('an2').set('expr', 'if(x<fai_cr1,0,if(x>fai_cr2,1,(-fai_cr1+x)/dfai_cr))');
+model.component('comp1').func('an2').set('plotargs', {'x' '0' '2'});
+model.component('comp1').func('an4').label([native2unicode(hex2dec({'53' '8b'}), 'unicode')  native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'53' '3a'}), 'unicode')  native2unicode(hex2dec({'57' 'df'}), 'unicode')  native2unicode(hex2dec({'51' 'fd'}), 'unicode')  native2unicode(hex2dec({'65' '70'}), 'unicode') ' 2']);
+model.component('comp1').func('an4').set('funcname', 'COE_p2');
+model.component('comp1').func('an4').set('expr', 'if(x<0.8,0,if(x<1,x,1))');
+model.component('comp1').func('an4').set('plotargs', {'x' '0' '2'});
+model.component('comp1').func('an3').label([native2unicode(hex2dec({'65' 'f6'}), 'unicode')  native2unicode(hex2dec({'95' 'f4'}), 'unicode')  native2unicode(hex2dec({'51' 'fd'}), 'unicode')  native2unicode(hex2dec({'65' '70'}), 'unicode') ]);
+model.component('comp1').func('an3').set('funcname', 't1');
+model.component('comp1').func('an3').set('expr', 'if(t<1,1*t,1)');
+model.component('comp1').func('an3').set('args', {'t'});
+model.component('comp1').func('an3').set('argunit', {'s'});
+model.component('comp1').func('an3').set('plotargs', {'t' '0' '20'});
+model.component('comp1').func('int1').set('funcname', 'n1');
+model.component('comp1').func('int1').set('table', {'0' 'k';  ...
+'1' '2';  ...
+'1.5' '1.5';  ...
+'2' '2';  ...
+'3' '4';  ...
+'3.5' '3.5';  ...
+'4' '4';  ...
+'5' '6';  ...
+'5.5' '5.5';  ...
+'6' '6';  ...
+'7' '8';  ...
+'7.5' '7.5';  ...
+'8' '8';  ...
+'9' '10';  ...
+'9.5' '9.5';  ...
+'10' '10';  ...
+'11' '12';  ...
+'11.5' '11.5';  ...
+'12' '12';  ...
+'13' '14';  ...
+'13.5' '13.5';  ...
+'14' '14';  ...
+'15' '16';  ...
+'15.5' '15.5';  ...
+'16' '16';  ...
+'17' '18';  ...
+'17.5' '17.5';  ...
+'18' '18';  ...
+'19' '20';  ...
+'19.5' '19.5';  ...
+'20' '20';  ...
+'30' '20'});
+model.component('comp1').func('int1').set('interp', 'piecewisecubic');
+model.component('comp1').func('int1').set('fununit', {'N/mm'});
+model.component('comp1').func('int1').set('argunit', {'s'});
+
+model.component('comp1').mesh.create('mesh1');
+
+model.component('comp1').geom('geom1').lengthUnit('mm');
+model.component('comp1').geom('geom1').create('r1', 'Rectangle');
+model.component('comp1').geom('geom1').feature('r1').set('size', {'WX' 'WY'});
+model.component('comp1').geom('geom1').create('ic1', 'InterpolationCurve');
+model.component('comp1').geom('geom1').feature('ic1').set('table', {'46' '0-50'; '46' 'WY+50'});
+model.component('comp1').geom('geom1').create('ic2', 'InterpolationCurve');
+model.component('comp1').geom('geom1').feature('ic2').set('table', {'46+I_ini' '0-50'; '46+I_ini' 'WY+50'});
+model.component('comp1').geom('geom1').create('ic3', 'InterpolationCurve');
+model.component('comp1').geom('geom1').feature('ic3').set('table', {'0-50' 'Dd'; 'WX+100' 'Dd'});
+model.component('comp1').geom('geom1').create('ic4', 'InterpolationCurve');
+model.component('comp1').geom('geom1').feature('ic4').set('table', {'0-50' 'Dd-l0/2'; 'WX+100' 'Dd-l0/2'});
+model.component('comp1').geom('geom1').create('ic5', 'InterpolationCurve');
+model.component('comp1').geom('geom1').feature('ic5').set('table', {'0-50' 'Dd+l0/2'; 'WX+100' 'Dd+l0/2'});
+model.component('comp1').geom('geom1').create('rot1', 'Rotate');
+model.component('comp1').geom('geom1').feature('rot1').set('rot', 'angel[rad]');
+model.component('comp1').geom('geom1').feature('rot1').set('pos', [50 50]);
+model.component('comp1').geom('geom1').feature('rot1').selection('input').set({'ic1' 'ic2' 'ic3' 'ic4' 'ic5'});
+model.component('comp1').geom('geom1').create('ic6', 'InterpolationCurve');
+model.component('comp1').geom('geom1').feature('ic6').set('table', {'-50' '30'; 'WX+50' '30'});
+model.component('comp1').geom('geom1').create('ic7', 'InterpolationCurve');
+model.component('comp1').geom('geom1').feature('ic7').set('table', {'-50' '70'; 'WX+50' '70'});
+model.component('comp1').geom('geom1').create('rot2', 'Rotate');
+model.component('comp1').geom('geom1').feature('rot2').set('rot', '(angel/2.4)[rad]');
+model.component('comp1').geom('geom1').feature('rot2').set('pos', [50 50]);
+model.component('comp1').geom('geom1').feature('rot2').selection('input').set({'ic6' 'ic7'});
+model.component('comp1').geom('geom1').create('csol1', 'ConvertToSolid');
+model.component('comp1').geom('geom1').feature('csol1').selection('input').set({'r1' 'rot1' 'rot2'});
+model.component('comp1').geom('geom1').create('del1', 'Delete');
+model.component('comp1').geom('geom1').feature('del1').selection('input').set('csol1(1)', [21 22 23 24 25 29 31 34 43 45 46 49 51 53 54 56]);
+model.component('comp1').geom('geom1').run;
+model.component('comp1').geom('geom1').run('fin');
+
+model.component('comp1').variable.create('var1');
+model.component('comp1').variable('var1').set('n1', 'if(tra1>0,(1-k)*(1-u)^2+k,1)');
+model.component('comp1').variable('var1').set('m1', 'if(solid.ep1>0,(1-k)*(1-u)^2+k,1)');
+model.component('comp1').variable('var1').set('n11', 'solid.ep1X');
+model.component('comp1').variable('var1').set('n12', 'solid.ep1Y');
+model.component('comp1').variable('var1').set('n13', 'solid.ep1Z');
+model.component('comp1').variable('var1').set('n21', 'solid.ep2X');
+model.component('comp1').variable('var1').set('n22', 'solid.ep2Y');
+model.component('comp1').variable('var1').set('n23', 'solid.ep2Z');
+model.component('comp1').variable('var1').set('n31', 'solid.ep3X');
+model.component('comp1').variable('var1').set('n32', 'solid.ep3Y');
+model.component('comp1').variable('var1').set('n33', 'solid.ep3Z');
+model.component('comp1').variable('var1').set('d11_p', 'if(solid.ep1>0,1,0)');
+model.component('comp1').variable('var1').set('d22_p', 'if(solid.ep2>0,1,0)');
+model.component('comp1').variable('var1').set('d33_p', 'if(solid.ep3>0,1,0)');
+model.component('comp1').variable('var1').set('d11_n', 'if(solid.ep1<=0,1,0)');
+model.component('comp1').variable('var1').set('d22_n', 'if(solid.ep2<=0,1,0)');
+model.component('comp1').variable('var1').set('d33_n', 'if(solid.ep3<=0,1,0)');
+model.component('comp1').variable('var1').set('l1', 'if(solid.ep1>solid.ep2,solid.ep1,solid.ep1+1e-9)');
+model.component('comp1').variable('var1').set('l2', 'solid.ep2');
+model.component('comp1').variable('var1').set('l3', 'if(solid.ep3<solid.ep2,solid.ep3,solid.ep3-1e-9)');
+model.component('comp1').variable('var1').set('g1_p', 'if(solid.ep1>solid.ep2,d11_p*solid.ep1,d11_p*solid.ep1+1e-9)');
+model.component('comp1').variable('var1').set('g2_p', 'd22_p*solid.ep2');
+model.component('comp1').variable('var1').set('g3_p', 'if(solid.ep3<solid.ep2,d33_p*solid.ep3,d33_p*solid.ep3-1e-9)');
+model.component('comp1').variable('var1').set('g1_n', 'if(solid.ep1>solid.ep2,d11_n*solid.ep1,d11_n*solid.ep1+1e-9)');
+model.component('comp1').variable('var1').set('g2_n', 'd22_n*solid.ep2');
+model.component('comp1').variable('var1').set('g3_n', 'if(solid.ep3<solid.ep2,d33_n*solid.ep3,d33_n*solid.ep3-1e-9)');
+model.component('comp1').variable('var1').set('g1111_p', 'd11_p*n11*n11*n11*n11+d22_p*n21*n21*n21*n21+d33_p*n31*n31*n31*n31+0.5*(g1_p-g2_p)/(l1-l2)*n11*n21*(n11*n21+n21*n11)+0.5*(g1_p-g3_p)/(l1-l3)*n11*n31*(n11*n31+n31*n11)+0.5*(g2_p-g1_p)/(l2-l1)*n21*n11*(n21*n11+n11*n21)+0.5*(g2_p-g3_p)/(l2-l3)*n21*n31*(n21*n31+n31*n21)+0.5*(g3_p-g1_p)/(l3-l1)*n31*n11*(n31*n11+n11*n31)+0.5*(g3_p-g2_p)/(l3-l2)*n31*n21*(n31*n21+n21*n31)');
+model.component('comp1').variable('var1').set('g1122_p', 'd11_p*n11*n11*n12*n12+d22_p*n21*n21*n22*n22+d33_p*n31*n31*n32*n32+0.5*(g1_p-g2_p)/(l1-l2)*n11*n21*(n12*n22+n22*n12)+0.5*(g1_p-g3_p)/(l1-l3)*n11*n31*(n12*n32+n32*n12)+0.5*(g2_p-g1_p)/(l2-l1)*n21*n11*(n22*n12+n12*n22)+0.5*(g2_p-g3_p)/(l2-l3)*n21*n31*(n22*n32+n32*n22)+0.5*(g3_p-g1_p)/(l3-l1)*n31*n11*(n32*n12+n12*n32)+0.5*(g3_p-g2_p)/(l3-l2)*n31*n21*(n32*n22+n22*n32)');
+model.component('comp1').variable('var1').set('g1133_p', 'd11_p*n11*n11*n13*n13+d22_p*n21*n21*n23*n23+d33_p*n31*n31*n33*n33+0.5*(g1_p-g2_p)/(l1-l2)*n11*n21*(n13*n23+n23*n13)+0.5*(g1_p-g3_p)/(l1-l3)*n11*n31*(n13*n33+n33*n13)+0.5*(g2_p-g1_p)/(l2-l1)*n21*n11*(n23*n13+n13*n23)+0.5*(g2_p-g3_p)/(l2-l3)*n21*n31*(n23*n33+n33*n23)+0.5*(g3_p-g1_p)/(l3-l1)*n31*n11*(n33*n13+n13*n33)+0.5*(g3_p-g2_p)/(l3-l2)*n31*n21*(n33*n23+n23*n33)');
+model.component('comp1').variable('var1').set('g1112_p', 'd11_p*n11*n11*n11*n12+d22_p*n21*n21*n21*n22+d33_p*n31*n31*n31*n32+0.5*(g1_p-g2_p)/(l1-l2)*n11*n21*(n11*n22+n21*n12)+0.5*(g1_p-g3_p)/(l1-l3)*n11*n31*(n11*n32+n31*n12)+0.5*(g2_p-g1_p)/(l2-l1)*n21*n11*(n21*n12+n11*n22)+0.5*(g2_p-g3_p)/(l2-l3)*n21*n31*(n21*n32+n31*n22)+0.5*(g3_p-g1_p)/(l3-l1)*n31*n11*(n31*n12+n11*n32)+0.5*(g3_p-g2_p)/(l3-l2)*n31*n21*(n31*n22+n21*n32)');
+model.component('comp1').variable('var1').set('g1123_p', 'd11_p*n11*n11*n12*n13+d22_p*n21*n21*n22*n23+d33_p*n31*n31*n32*n33+0.5*(g1_p-g2_p)/(l1-l2)*n11*n21*(n12*n23+n22*n13)+0.5*(g1_p-g3_p)/(l1-l3)*n11*n31*(n12*n33+n32*n13)+0.5*(g2_p-g1_p)/(l2-l1)*n21*n11*(n22*n13+n12*n23)+0.5*(g2_p-g3_p)/(l2-l3)*n21*n31*(n22*n33+n32*n23)+0.5*(g3_p-g1_p)/(l3-l1)*n31*n11*(n32*n13+n12*n33)+0.5*(g3_p-g2_p)/(l3-l2)*n31*n21*(n32*n23+n22*n33)');
+model.component('comp1').variable('var1').set('g1113_p', 'd11_p*n11*n11*n11*n13+d22_p*n21*n21*n21*n23+d33_p*n31*n31*n31*n33+0.5*(g1_p-g2_p)/(l1-l2)*n11*n21*(n11*n23+n21*n13)+0.5*(g1_p-g3_p)/(l1-l3)*n11*n31*(n11*n33+n31*n13)+0.5*(g2_p-g1_p)/(l2-l1)*n21*n11*(n21*n13+n11*n23)+0.5*(g2_p-g3_p)/(l2-l3)*n21*n31*(n21*n33+n31*n23)+0.5*(g3_p-g1_p)/(l3-l1)*n31*n11*(n31*n13+n11*n33)+0.5*(g3_p-g2_p)/(l3-l2)*n31*n21*(n31*n23+n21*n33)');
+model.component('comp1').variable('var1').set('g2222_p', 'd11_p*n12*n12*n12*n12+d22_p*n22*n22*n22*n22+d33_p*n32*n32*n32*n32+0.5*(g1_p-g2_p)/(l1-l2)*n12*n22*(n12*n22+n22*n12)+0.5*(g1_p-g3_p)/(l1-l3)*n12*n32*(n12*n32+n32*n12)+0.5*(g2_p-g1_p)/(l2-l1)*n22*n12*(n22*n12+n12*n22)+0.5*(g2_p-g3_p)/(l2-l3)*n22*n32*(n22*n32+n32*n22)+0.5*(g3_p-g1_p)/(l3-l1)*n32*n12*(n32*n12+n12*n32)+0.5*(g3_p-g2_p)/(l3-l2)*n32*n22*(n32*n22+n22*n32)');
+model.component('comp1').variable('var1').set('g2233_p', 'd11_p*n12*n12*n13*n13+d22_p*n22*n22*n23*n23+d33_p*n32*n32*n33*n33+0.5*(g1_p-g2_p)/(l1-l2)*n12*n22*(n13*n23+n23*n13)+0.5*(g1_p-g3_p)/(l1-l3)*n12*n32*(n13*n33+n33*n13)+0.5*(g2_p-g1_p)/(l2-l1)*n22*n12*(n23*n13+n13*n23)+0.5*(g2_p-g3_p)/(l2-l3)*n22*n32*(n23*n33+n33*n23)+0.5*(g3_p-g1_p)/(l3-l1)*n32*n12*(n33*n13+n13*n33)+0.5*(g3_p-g2_p)/(l3-l2)*n32*n22*(n33*n23+n23*n33)');
+model.component('comp1').variable('var1').set('g2212_p', 'd11_p*n12*n12*n11*n12+d22_p*n22*n22*n21*n22+d33_p*n32*n32*n31*n32+0.5*(g1_p-g2_p)/(l1-l2)*n12*n22*(n11*n22+n21*n12)+0.5*(g1_p-g3_p)/(l1-l3)*n12*n32*(n11*n32+n31*n12)+0.5*(g2_p-g1_p)/(l2-l1)*n22*n12*(n21*n12+n11*n22)+0.5*(g2_p-g3_p)/(l2-l3)*n22*n32*(n21*n32+n31*n22)+0.5*(g3_p-g1_p)/(l3-l1)*n32*n12*(n31*n12+n11*n32)+0.5*(g3_p-g2_p)/(l3-l2)*n32*n22*(n31*n22+n21*n32)');
+model.component('comp1').variable('var1').set('g2223_p', 'd11_p*n12*n12*n12*n13+d22_p*n22*n22*n22*n23+d33_p*n32*n32*n32*n33+0.5*(g1_p-g2_p)/(l1-l2)*n12*n22*(n12*n23+n22*n13)+0.5*(g1_p-g3_p)/(l1-l3)*n12*n32*(n12*n33+n32*n13)+0.5*(g2_p-g1_p)/(l2-l1)*n22*n12*(n22*n13+n12*n23)+0.5*(g2_p-g3_p)/(l2-l3)*n22*n32*(n22*n33+n32*n23)+0.5*(g3_p-g1_p)/(l3-l1)*n32*n12*(n32*n13+n12*n33)+0.5*(g3_p-g2_p)/(l3-l2)*n32*n22*(n32*n23+n22*n33)');
+model.component('comp1').variable('var1').set('g2213_p', 'd11_p*n12*n12*n11*n13+d22_p*n22*n22*n21*n23+d33_p*n32*n32*n31*n33+0.5*(g1_p-g2_p)/(l1-l2)*n12*n22*(n11*n23+n21*n13)+0.5*(g1_p-g3_p)/(l1-l3)*n12*n32*(n11*n33+n31*n13)+0.5*(g2_p-g1_p)/(l2-l1)*n22*n12*(n21*n13+n11*n23)+0.5*(g2_p-g3_p)/(l2-l3)*n22*n32*(n21*n33+n31*n23)+0.5*(g3_p-g1_p)/(l3-l1)*n32*n12*(n31*n13+n11*n33)+0.5*(g3_p-g2_p)/(l3-l2)*n32*n22*(n31*n23+n21*n33)');
+model.component('comp1').variable('var1').set('g3333_p', 'd11_p*n13*n13*n13*n13+d22_p*n23*n23*n23*n23+d33_p*n33*n33*n33*n33+0.5*(g1_p-g2_p)/(l1-l2)*n13*n23*(n13*n23+n23*n13)+0.5*(g1_p-g3_p)/(l1-l3)*n13*n33*(n13*n33+n33*n13)+0.5*(g2_p-g1_p)/(l2-l1)*n23*n13*(n23*n13+n13*n23)+0.5*(g2_p-g3_p)/(l2-l3)*n23*n33*(n23*n33+n33*n23)+0.5*(g3_p-g1_p)/(l3-l1)*n33*n13*(n33*n13+n13*n33)+0.5*(g3_p-g2_p)/(l3-l2)*n33*n23*(n33*n23+n23*n33)');
+model.component('comp1').variable('var1').set('g3312_p', 'd11_p*n13*n13*n11*n12+d22_p*n23*n23*n21*n22+d33_p*n33*n33*n31*n32+0.5*(g1_p-g2_p)/(l1-l2)*n13*n23*(n11*n22+n21*n12)+0.5*(g1_p-g3_p)/(l1-l3)*n13*n33*(n11*n32+n31*n12)+0.5*(g2_p-g1_p)/(l2-l1)*n23*n13*(n21*n12+n11*n22)+0.5*(g2_p-g3_p)/(l2-l3)*n23*n33*(n21*n32+n31*n22)+0.5*(g3_p-g1_p)/(l3-l1)*n33*n13*(n31*n12+n11*n32)+0.5*(g3_p-g2_p)/(l3-l2)*n33*n23*(n31*n22+n21*n32)');
+model.component('comp1').variable('var1').set('g3323_p', 'd11_p*n13*n13*n12*n13+d22_p*n23*n23*n22*n23+d33_p*n33*n33*n32*n33+0.5*(g1_p-g2_p)/(l1-l2)*n13*n23*(n12*n23+n22*n13)+0.5*(g1_p-g3_p)/(l1-l3)*n13*n33*(n12*n33+n32*n13)+0.5*(g2_p-g1_p)/(l2-l1)*n23*n13*(n22*n13+n12*n23)+0.5*(g2_p-g3_p)/(l2-l3)*n23*n33*(n22*n33+n32*n23)+0.5*(g3_p-g1_p)/(l3-l1)*n33*n13*(n32*n13+n12*n33)+0.5*(g3_p-g2_p)/(l3-l2)*n33*n23*(n32*n23+n22*n33)');
+model.component('comp1').variable('var1').set('g3313_p', 'd11_p*n13*n13*n11*n13+d22_p*n23*n23*n21*n23+d33_p*n33*n33*n31*n33+0.5*(g1_p-g2_p)/(l1-l2)*n13*n23*(n11*n23+n21*n13)+0.5*(g1_p-g3_p)/(l1-l3)*n13*n33*(n11*n33+n31*n13)+0.5*(g2_p-g1_p)/(l2-l1)*n23*n13*(n21*n13+n11*n23)+0.5*(g2_p-g3_p)/(l2-l3)*n23*n33*(n21*n33+n31*n23)+0.5*(g3_p-g1_p)/(l3-l1)*n33*n13*(n31*n13+n11*n33)+0.5*(g3_p-g2_p)/(l3-l2)*n33*n23*(n31*n23+n21*n33)');
+model.component('comp1').variable('var1').set('g1212_p', 'd11_p*n11*n12*n11*n12+d22_p*n21*n22*n21*n22+d33_p*n31*n32*n31*n32+0.5*(g1_p-g2_p)/(l1-l2)*n11*n22*(n11*n22+n21*n12)+0.5*(g1_p-g3_p)/(l1-l3)*n11*n32*(n11*n32+n31*n12)+0.5*(g2_p-g1_p)/(l2-l1)*n21*n12*(n21*n12+n11*n22)+0.5*(g2_p-g3_p)/(l2-l3)*n21*n32*(n21*n32+n31*n22)+0.5*(g3_p-g1_p)/(l3-l1)*n31*n12*(n31*n12+n11*n32)+0.5*(g3_p-g2_p)/(l3-l2)*n31*n22*(n31*n22+n21*n32)');
+model.component('comp1').variable('var1').set('g1223_p', 'd11_p*n11*n12*n12*n13+d22_p*n21*n22*n22*n23+d33_p*n31*n32*n32*n33+0.5*(g1_p-g2_p)/(l1-l2)*n11*n22*(n12*n23+n22*n13)+0.5*(g1_p-g3_p)/(l1-l3)*n11*n32*(n12*n33+n32*n13)+0.5*(g2_p-g1_p)/(l2-l1)*n21*n12*(n22*n13+n12*n23)+0.5*(g2_p-g3_p)/(l2-l3)*n21*n32*(n22*n33+n32*n23)+0.5*(g3_p-g1_p)/(l3-l1)*n31*n12*(n32*n13+n12*n33)+0.5*(g3_p-g2_p)/(l3-l2)*n31*n22*(n32*n23+n22*n33)');
+model.component('comp1').variable('var1').set('g1213_p', 'd11_p*n11*n12*n11*n13+d22_p*n21*n22*n21*n23+d33_p*n31*n32*n31*n33+0.5*(g1_p-g2_p)/(l1-l2)*n11*n22*(n11*n23+n21*n13)+0.5*(g1_p-g3_p)/(l1-l3)*n11*n32*(n11*n33+n31*n13)+0.5*(g2_p-g1_p)/(l2-l1)*n21*n12*(n21*n13+n11*n23)+0.5*(g2_p-g3_p)/(l2-l3)*n21*n32*(n21*n33+n31*n23)+0.5*(g3_p-g1_p)/(l3-l1)*n31*n12*(n31*n13+n11*n33)+0.5*(g3_p-g2_p)/(l3-l2)*n31*n22*(n31*n23+n21*n33)');
+model.component('comp1').variable('var1').set('g2323_p', 'd11_p*n12*n13*n12*n13+d22_p*n22*n23*n22*n23+d33_p*n32*n33*n32*n33+0.5*(g1_p-g2_p)/(l1-l2)*n12*n23*(n12*n23+n22*n13)+0.5*(g1_p-g3_p)/(l1-l3)*n12*n33*(n12*n33+n32*n13)+0.5*(g2_p-g1_p)/(l2-l1)*n22*n13*(n22*n13+n12*n23)+0.5*(g2_p-g3_p)/(l2-l3)*n22*n33*(n22*n33+n32*n23)+0.5*(g3_p-g1_p)/(l3-l1)*n32*n13*(n32*n13+n12*n33)+0.5*(g3_p-g2_p)/(l3-l2)*n32*n23*(n32*n23+n22*n33)');
+model.component('comp1').variable('var1').set('g2313_p', 'd11_p*n12*n13*n11*n13+d22_p*n22*n23*n21*n23+d33_p*n32*n33*n31*n33+0.5*(g1_p-g2_p)/(l1-l2)*n12*n23*(n11*n23+n21*n13)+0.5*(g1_p-g3_p)/(l1-l3)*n12*n33*(n11*n33+n31*n13)+0.5*(g2_p-g1_p)/(l2-l1)*n22*n13*(n21*n13+n11*n23)+0.5*(g2_p-g3_p)/(l2-l3)*n22*n33*(n21*n33+n31*n23)+0.5*(g3_p-g1_p)/(l3-l1)*n32*n13*(n31*n13+n11*n33)+0.5*(g3_p-g2_p)/(l3-l2)*n32*n23*(n31*n23+n21*n33)');
+model.component('comp1').variable('var1').set('g1313_p', 'd11_p*n11*n13*n11*n13+d22_p*n21*n23*n21*n23+d33_p*n31*n33*n31*n33+0.5*(g1_p-g2_p)/(l1-l2)*n11*n23*(n11*n23+n21*n13)+0.5*(g1_p-g3_p)/(l1-l3)*n11*n33*(n11*n33+n31*n13)+0.5*(g2_p-g1_p)/(l2-l1)*n21*n13*(n21*n13+n11*n23)+0.5*(g2_p-g3_p)/(l2-l3)*n21*n33*(n21*n33+n31*n23)+0.5*(g3_p-g1_p)/(l3-l1)*n31*n13*(n31*n13+n11*n33)+0.5*(g3_p-g2_p)/(l3-l2)*n31*n23*(n31*n23+n21*n33)');
+model.component('comp1').variable('var1').set('g1111_n', 'd11_n*n11*n11*n11*n11+d22_n*n21*n21*n21*n21+d33_n*n31*n31*n31*n31+0.5*(g1_n-g2_n)/(l1-l2)*n11*n21*(n11*n21+n21*n11)+0.5*(g1_n-g3_n)/(l1-l3)*n11*n31*(n11*n31+n31*n11)+0.5*(g2_n-g1_n)/(l2-l1)*n21*n11*(n21*n11+n11*n21)+0.5*(g2_n-g3_n)/(l2-l3)*n21*n31*(n21*n31+n31*n21)+0.5*(g3_n-g1_n)/(l3-l1)*n31*n11*(n31*n11+n11*n31)+0.5*(g3_n-g2_n)/(l3-l2)*n31*n21*(n31*n21+n21*n31)');
+model.component('comp1').variable('var1').set('g1122_n', 'd11_n*n11*n11*n12*n12+d22_n*n21*n21*n22*n22+d33_n*n31*n31*n32*n32+0.5*(g1_n-g2_n)/(l1-l2)*n11*n21*(n12*n22+n22*n12)+0.5*(g1_n-g3_n)/(l1-l3)*n11*n31*(n12*n32+n32*n12)+0.5*(g2_n-g1_n)/(l2-l1)*n21*n11*(n22*n12+n12*n22)+0.5*(g2_n-g3_n)/(l2-l3)*n21*n31*(n22*n32+n32*n22)+0.5*(g3_n-g1_n)/(l3-l1)*n31*n11*(n32*n12+n12*n32)+0.5*(g3_n-g2_n)/(l3-l2)*n31*n21*(n32*n22+n22*n32)');
+model.component('comp1').variable('var1').set('g1133_n', 'd11_n*n11*n11*n13*n13+d22_n*n21*n21*n23*n23+d33_n*n31*n31*n33*n33+0.5*(g1_n-g2_n)/(l1-l2)*n11*n21*(n13*n23+n23*n13)+0.5*(g1_n-g3_n)/(l1-l3)*n11*n31*(n13*n33+n33*n13)+0.5*(g2_n-g1_n)/(l2-l1)*n21*n11*(n23*n13+n13*n23)+0.5*(g2_n-g3_n)/(l2-l3)*n21*n31*(n23*n33+n33*n23)+0.5*(g3_n-g1_n)/(l3-l1)*n31*n11*(n33*n13+n13*n33)+0.5*(g3_n-g2_n)/(l3-l2)*n31*n21*(n33*n23+n23*n33)');
+model.component('comp1').variable('var1').set('g1112_n', 'd11_n*n11*n11*n11*n12+d22_n*n21*n21*n21*n22+d33_n*n31*n31*n31*n32+0.5*(g1_n-g2_n)/(l1-l2)*n11*n21*(n11*n22+n21*n12)+0.5*(g1_n-g3_n)/(l1-l3)*n11*n31*(n11*n32+n31*n12)+0.5*(g2_n-g1_n)/(l2-l1)*n21*n11*(n21*n12+n11*n22)+0.5*(g2_n-g3_n)/(l2-l3)*n21*n31*(n21*n32+n31*n22)+0.5*(g3_n-g1_n)/(l3-l1)*n31*n11*(n31*n12+n11*n32)+0.5*(g3_n-g2_n)/(l3-l2)*n31*n21*(n31*n22+n21*n32)');
+model.component('comp1').variable('var1').set('g1123_n', 'd11_n*n11*n11*n12*n13+d22_n*n21*n21*n22*n23+d33_n*n31*n31*n32*n33+0.5*(g1_n-g2_n)/(l1-l2)*n11*n21*(n12*n23+n22*n13)+0.5*(g1_n-g3_n)/(l1-l3)*n11*n31*(n12*n33+n32*n13)+0.5*(g2_n-g1_n)/(l2-l1)*n21*n11*(n22*n13+n12*n23)+0.5*(g2_n-g3_n)/(l2-l3)*n21*n31*(n22*n33+n32*n23)+0.5*(g3_n-g1_n)/(l3-l1)*n31*n11*(n32*n13+n12*n33)+0.5*(g3_n-g2_n)/(l3-l2)*n31*n21*(n32*n23+n22*n33)');
+model.component('comp1').variable('var1').set('g1113_n', 'd11_n*n11*n11*n11*n13+d22_n*n21*n21*n21*n23+d33_n*n31*n31*n31*n33+0.5*(g1_n-g2_n)/(l1-l2)*n11*n21*(n11*n23+n21*n13)+0.5*(g1_n-g3_n)/(l1-l3)*n11*n31*(n11*n33+n31*n13)+0.5*(g2_n-g1_n)/(l2-l1)*n21*n11*(n21*n13+n11*n23)+0.5*(g2_n-g3_n)/(l2-l3)*n21*n31*(n21*n33+n31*n23)+0.5*(g3_n-g1_n)/(l3-l1)*n31*n11*(n31*n13+n11*n33)+0.5*(g3_n-g2_n)/(l3-l2)*n31*n21*(n31*n23+n21*n33)');
+model.component('comp1').variable('var1').set('g2222_n', 'd11_n*n12*n12*n12*n12+d22_n*n22*n22*n22*n22+d33_n*n32*n32*n32*n32+0.5*(g1_n-g2_n)/(l1-l2)*n12*n22*(n12*n22+n22*n12)+0.5*(g1_n-g3_n)/(l1-l3)*n12*n32*(n12*n32+n32*n12)+0.5*(g2_n-g1_n)/(l2-l1)*n22*n12*(n22*n12+n12*n22)+0.5*(g2_n-g3_n)/(l2-l3)*n22*n32*(n22*n32+n32*n22)+0.5*(g3_n-g1_n)/(l3-l1)*n32*n12*(n32*n12+n12*n32)+0.5*(g3_n-g2_n)/(l3-l2)*n32*n22*(n32*n22+n22*n32)');
+model.component('comp1').variable('var1').set('g2233_n', 'd11_n*n12*n12*n13*n13+d22_n*n22*n22*n23*n23+d33_n*n32*n32*n33*n33+0.5*(g1_n-g2_n)/(l1-l2)*n12*n22*(n13*n23+n23*n13)+0.5*(g1_n-g3_n)/(l1-l3)*n12*n32*(n13*n33+n33*n13)+0.5*(g2_n-g1_n)/(l2-l1)*n22*n12*(n23*n13+n13*n23)+0.5*(g2_n-g3_n)/(l2-l3)*n22*n32*(n23*n33+n33*n23)+0.5*(g3_n-g1_n)/(l3-l1)*n32*n12*(n33*n13+n13*n33)+0.5*(g3_n-g2_n)/(l3-l2)*n32*n22*(n33*n23+n23*n33)');
+model.component('comp1').variable('var1').set('g2212_n', 'd11_n*n12*n12*n11*n12+d22_n*n22*n22*n21*n22+d33_n*n32*n32*n31*n32+0.5*(g1_n-g2_n)/(l1-l2)*n12*n22*(n11*n22+n21*n12)+0.5*(g1_n-g3_n)/(l1-l3)*n12*n32*(n11*n32+n31*n12)+0.5*(g2_n-g1_n)/(l2-l1)*n22*n12*(n21*n12+n11*n22)+0.5*(g2_n-g3_n)/(l2-l3)*n22*n32*(n21*n32+n31*n22)+0.5*(g3_n-g1_n)/(l3-l1)*n32*n12*(n31*n12+n11*n32)+0.5*(g3_n-g2_n)/(l3-l2)*n32*n22*(n31*n22+n21*n32)');
+model.component('comp1').variable('var1').set('g2223_n', 'd11_n*n12*n12*n12*n13+d22_n*n22*n22*n22*n23+d33_n*n32*n32*n32*n33+0.5*(g1_n-g2_n)/(l1-l2)*n12*n22*(n12*n23+n22*n13)+0.5*(g1_n-g3_n)/(l1-l3)*n12*n32*(n12*n33+n32*n13)+0.5*(g2_n-g1_n)/(l2-l1)*n22*n12*(n22*n13+n12*n23)+0.5*(g2_n-g3_n)/(l2-l3)*n22*n32*(n22*n33+n32*n23)+0.5*(g3_n-g1_n)/(l3-l1)*n32*n12*(n32*n13+n12*n33)+0.5*(g3_n-g2_n)/(l3-l2)*n32*n22*(n32*n23+n22*n33)');
+model.component('comp1').variable('var1').set('g2213_n', 'd11_n*n12*n12*n11*n13+d22_n*n22*n22*n21*n23+d33_n*n32*n32*n31*n33+0.5*(g1_n-g2_n)/(l1-l2)*n12*n22*(n11*n23+n21*n13)+0.5*(g1_n-g3_n)/(l1-l3)*n12*n32*(n11*n33+n31*n13)+0.5*(g2_n-g1_n)/(l2-l1)*n22*n12*(n21*n13+n11*n23)+0.5*(g2_n-g3_n)/(l2-l3)*n22*n32*(n21*n33+n31*n23)+0.5*(g3_n-g1_n)/(l3-l1)*n32*n12*(n31*n13+n11*n33)+0.5*(g3_n-g2_n)/(l3-l2)*n32*n22*(n31*n23+n21*n33)');
+model.component('comp1').variable('var1').set('g3333_n', 'd11_n*n13*n13*n13*n13+d22_n*n23*n23*n23*n23+d33_n*n33*n33*n33*n33+0.5*(g1_n-g2_n)/(l1-l2)*n13*n23*(n13*n23+n23*n13)+0.5*(g1_n-g3_n)/(l1-l3)*n13*n33*(n13*n33+n33*n13)+0.5*(g2_n-g1_n)/(l2-l1)*n23*n13*(n23*n13+n13*n23)+0.5*(g2_n-g3_n)/(l2-l3)*n23*n33*(n23*n33+n33*n23)+0.5*(g3_n-g1_n)/(l3-l1)*n33*n13*(n33*n13+n13*n33)+0.5*(g3_n-g2_n)/(l3-l2)*n33*n23*(n33*n23+n23*n33)');
+model.component('comp1').variable('var1').set('g3312_n', 'd11_n*n13*n13*n11*n12+d22_n*n23*n23*n21*n22+d33_n*n33*n33*n31*n32+0.5*(g1_n-g2_n)/(l1-l2)*n13*n23*(n11*n22+n21*n12)+0.5*(g1_n-g3_n)/(l1-l3)*n13*n33*(n11*n32+n31*n12)+0.5*(g2_n-g1_n)/(l2-l1)*n23*n13*(n21*n12+n11*n22)+0.5*(g2_n-g3_n)/(l2-l3)*n23*n33*(n21*n32+n31*n22)+0.5*(g3_n-g1_n)/(l3-l1)*n33*n13*(n31*n12+n11*n32)+0.5*(g3_n-g2_n)/(l3-l2)*n33*n23*(n31*n22+n21*n32)');
+model.component('comp1').variable('var1').set('g3323_n', 'd11_n*n13*n13*n12*n13+d22_n*n23*n23*n22*n23+d33_n*n33*n33*n32*n33+0.5*(g1_n-g2_n)/(l1-l2)*n13*n23*(n12*n23+n22*n13)+0.5*(g1_n-g3_n)/(l1-l3)*n13*n33*(n12*n33+n32*n13)+0.5*(g2_n-g1_n)/(l2-l1)*n23*n13*(n22*n13+n12*n23)+0.5*(g2_n-g3_n)/(l2-l3)*n23*n33*(n22*n33+n32*n23)+0.5*(g3_n-g1_n)/(l3-l1)*n33*n13*(n32*n13+n12*n33)+0.5*(g3_n-g2_n)/(l3-l2)*n33*n23*(n32*n23+n22*n33)');
+model.component('comp1').variable('var1').set('g3313_n', 'd11_n*n13*n13*n11*n13+d22_n*n23*n23*n21*n23+d33_n*n33*n33*n31*n33+0.5*(g1_n-g2_n)/(l1-l2)*n13*n23*(n11*n23+n21*n13)+0.5*(g1_n-g3_n)/(l1-l3)*n13*n33*(n11*n33+n31*n13)+0.5*(g2_n-g1_n)/(l2-l1)*n23*n13*(n21*n13+n11*n23)+0.5*(g2_n-g3_n)/(l2-l3)*n23*n33*(n21*n33+n31*n23)+0.5*(g3_n-g1_n)/(l3-l1)*n33*n13*(n31*n13+n11*n33)+0.5*(g3_n-g2_n)/(l3-l2)*n33*n23*(n31*n23+n21*n33)');
+model.component('comp1').variable('var1').set('g1212_n', 'd11_n*n11*n12*n11*n12+d22_n*n21*n22*n21*n22+d33_n*n31*n32*n31*n32+0.5*(g1_n-g2_n)/(l1-l2)*n11*n22*(n11*n22+n21*n12)+0.5*(g1_n-g3_n)/(l1-l3)*n11*n32*(n11*n32+n31*n12)+0.5*(g2_n-g1_n)/(l2-l1)*n21*n12*(n21*n12+n11*n22)+0.5*(g2_n-g3_n)/(l2-l3)*n21*n32*(n21*n32+n31*n22)+0.5*(g3_n-g1_n)/(l3-l1)*n31*n12*(n31*n12+n11*n32)+0.5*(g3_n-g2_n)/(l3-l2)*n31*n22*(n31*n22+n21*n32)');
+model.component('comp1').variable('var1').set('g1223_n', 'd11_n*n11*n12*n12*n13+d22_n*n21*n22*n22*n23+d33_n*n31*n32*n32*n33+0.5*(g1_n-g2_n)/(l1-l2)*n11*n22*(n12*n23+n22*n13)+0.5*(g1_n-g3_n)/(l1-l3)*n11*n32*(n12*n33+n32*n13)+0.5*(g2_n-g1_n)/(l2-l1)*n21*n12*(n22*n13+n12*n23)+0.5*(g2_n-g3_n)/(l2-l3)*n21*n32*(n22*n33+n32*n23)+0.5*(g3_n-g1_n)/(l3-l1)*n31*n12*(n32*n13+n12*n33)+0.5*(g3_n-g2_n)/(l3-l2)*n31*n22*(n32*n23+n22*n33)');
+model.component('comp1').variable('var1').set('g1213_n', 'd11_n*n11*n12*n11*n13+d22_n*n21*n22*n21*n23+d33_n*n31*n32*n31*n33+0.5*(g1_n-g2_n)/(l1-l2)*n11*n22*(n11*n23+n21*n13)+0.5*(g1_n-g3_n)/(l1-l3)*n11*n32*(n11*n33+n31*n13)+0.5*(g2_n-g1_n)/(l2-l1)*n21*n12*(n21*n13+n11*n23)+0.5*(g2_n-g3_n)/(l2-l3)*n21*n32*(n21*n33+n31*n23)+0.5*(g3_n-g1_n)/(l3-l1)*n31*n12*(n31*n13+n11*n33)+0.5*(g3_n-g2_n)/(l3-l2)*n31*n22*(n31*n23+n21*n33)');
+model.component('comp1').variable('var1').set('g2323_n', 'd11_n*n12*n13*n12*n13+d22_n*n22*n23*n22*n23+d33_n*n32*n33*n32*n33+0.5*(g1_n-g2_n)/(l1-l2)*n12*n23*(n12*n23+n22*n13)+0.5*(g1_n-g3_n)/(l1-l3)*n12*n33*(n12*n33+n32*n13)+0.5*(g2_n-g1_n)/(l2-l1)*n22*n13*(n22*n13+n12*n23)+0.5*(g2_n-g3_n)/(l2-l3)*n22*n33*(n22*n33+n32*n23)+0.5*(g3_n-g1_n)/(l3-l1)*n32*n13*(n32*n13+n12*n33)+0.5*(g3_n-g2_n)/(l3-l2)*n32*n23*(n32*n23+n22*n33)');
+model.component('comp1').variable('var1').set('g2313_n', 'd11_n*n12*n13*n11*n13+d22_n*n22*n23*n21*n23+d33_n*n32*n33*n31*n33+0.5*(g1_n-g2_n)/(l1-l2)*n12*n23*(n11*n23+n21*n13)+0.5*(g1_n-g3_n)/(l1-l3)*n12*n33*(n11*n33+n31*n13)+0.5*(g2_n-g1_n)/(l2-l1)*n22*n13*(n21*n13+n11*n23)+0.5*(g2_n-g3_n)/(l2-l3)*n22*n33*(n21*n33+n31*n23)+0.5*(g3_n-g1_n)/(l3-l1)*n32*n13*(n31*n13+n11*n33)+0.5*(g3_n-g2_n)/(l3-l2)*n32*n23*(n31*n23+n21*n33)');
+model.component('comp1').variable('var1').set('g1313_n', 'd11_n*n11*n13*n11*n13+d22_n*n21*n23*n21*n23+d33_n*n31*n33*n31*n33+0.5*(g1_n-g2_n)/(l1-l2)*n11*n23*(n11*n23+n21*n13)+0.5*(g1_n-g3_n)/(l1-l3)*n11*n33*(n11*n33+n31*n13)+0.5*(g2_n-g1_n)/(l2-l1)*n21*n13*(n21*n13+n11*n23)+0.5*(g2_n-g3_n)/(l2-l3)*n21*n33*(n21*n33+n31*n23)+0.5*(g3_n-g1_n)/(l3-l1)*n31*n13*(n31*n13+n11*n33)+0.5*(g3_n-g2_n)/(l3-l2)*n31*n23*(n31*n23+n21*n33)');
+model.component('comp1').variable('var1').set('cc', '(1-k)*(1-phi)^2+k');
+model.component('comp1').variable('var1').set('dd', 'if(tra1>0,(1-k)*(1-phi)^2+k,1)');
+model.component('comp1').variable('var1').set('g1111', '2*mu*(cc*g1111_p+g1111_n)+lanta*dd');
+model.component('comp1').variable('var1').set('g1122', '2*mu*(cc*g1122_p+g1122_n)+lanta*dd');
+model.component('comp1').variable('var1').set('g1133', '2*mu*(cc*g1133_p+g1133_n)+lanta*dd');
+model.component('comp1').variable('var1').set('g1112', '2*mu*(cc*g1112_p+g1112_n)');
+model.component('comp1').variable('var1').set('g1123', '2*mu*(cc*g1123_p+g1123_n)');
+model.component('comp1').variable('var1').set('g1113', '2*mu*(cc*g1113_p+g1113_n)');
+model.component('comp1').variable('var1').set('g2222', '2*mu*(cc*g2222_p+g2222_n)+lanta*dd');
+model.component('comp1').variable('var1').set('g2233', '2*mu*(cc*g2233_p+g2233_n)+lanta*dd');
+model.component('comp1').variable('var1').set('g2212', '2*mu*(cc*g2212_p+g2212_n)');
+model.component('comp1').variable('var1').set('g2223', '2*mu*(cc*g2223_p+g2223_n)');
+model.component('comp1').variable('var1').set('g2213', '2*mu*(cc*g2213_p+g2213_n)');
+model.component('comp1').variable('var1').set('g3333', '2*mu*(cc*g3333_p+g3333_n)+lanta*dd');
+model.component('comp1').variable('var1').set('g3312', '2*mu*(cc*g3312_p+g3312_n)');
+model.component('comp1').variable('var1').set('g3323', '2*mu*(cc*g3323_p+g3323_n)');
+model.component('comp1').variable('var1').set('g3313', '2*mu*(cc*g3313_p+g3313_n)');
+model.component('comp1').variable('var1').set('g1212', '2*mu*(cc*g1212_p+g1212_n)');
+model.component('comp1').variable('var1').set('g1223', '2*mu*(cc*g1223_p+g1223_n)');
+model.component('comp1').variable('var1').set('g1213', '2*mu*(cc*g1213_p+g1213_n)');
+model.component('comp1').variable('var1').set('g2323', '2*mu*(cc*g2323_p+g2323_n)');
+model.component('comp1').variable('var1').set('g2313', '2*mu*(cc*g2313_p+g2313_n)');
+model.component('comp1').variable('var1').set('g1313', '2*mu*(cc*g1313_p+g1313_n)');
+model.component('comp1').variable('var1').set('K', 'lanta+2/3*mu');
+model.component('comp1').variable('var1').set('evol', 'tra1');
+model.component('comp1').variable.create('var2');
+model.component('comp1').variable('var2').set('e1_p', 'if(solid.ep1>0,solid.ep1,0)', [native2unicode(hex2dec({'4e' '3b'}), 'unicode')  native2unicode(hex2dec({'5e' '94'}), 'unicode')  native2unicode(hex2dec({'53' 'd8'}), 'unicode') ]);
+model.component('comp1').variable('var2').set('e2_p', 'if(solid.ep2>0,solid.ep2,0)', [native2unicode(hex2dec({'4e' '3b'}), 'unicode')  native2unicode(hex2dec({'5e' '94'}), 'unicode')  native2unicode(hex2dec({'53' 'd8'}), 'unicode') ]);
+model.component('comp1').variable('var2').set('e3_p', 'if(solid.ep3>0,solid.ep3,0)', [native2unicode(hex2dec({'4e' '3b'}), 'unicode')  native2unicode(hex2dec({'5e' '94'}), 'unicode')  native2unicode(hex2dec({'53' 'd8'}), 'unicode') ]);
+model.component('comp1').variable('var2').set('tra1', 'solid.ep1+solid.ep2+solid.ep3', [native2unicode(hex2dec({'4f' '53'}), 'unicode')  native2unicode(hex2dec({'5e' '94'}), 'unicode')  native2unicode(hex2dec({'53' 'd8'}), 'unicode') ]);
+model.component('comp1').variable('var2').set('tra1_p', 'if(tra1>0,tra1,0)', [native2unicode(hex2dec({'4f' '53'}), 'unicode')  native2unicode(hex2dec({'5e' '94'}), 'unicode')  native2unicode(hex2dec({'53' 'd8'}), 'unicode')  native2unicode(hex2dec({'ff' '08'}), 'unicode')  native2unicode(hex2dec({'90' '00'}), 'unicode')  native2unicode(hex2dec({'53' '16'}), 'unicode')  native2unicode(hex2dec({'52' '06'}), 'unicode')  native2unicode(hex2dec({'8f' 'a8'}), 'unicode')  native2unicode(hex2dec({'ff' '09'}), 'unicode') ]);
+model.component('comp1').variable('var2').set('fai_p', 'lanta*tra1_p^2/2+mu*(e1_p^2+e2_p^2+e3_p^2)', [native2unicode(hex2dec({'5e' '94'}), 'unicode')  native2unicode(hex2dec({'53' 'd8'}), 'unicode')  native2unicode(hex2dec({'80' 'fd'}), 'unicode')  native2unicode(hex2dec({'5b' 'c6'}), 'unicode')  native2unicode(hex2dec({'5e' 'a6'}), 'unicode')  native2unicode(hex2dec({'ff' '08'}), 'unicode')  native2unicode(hex2dec({'80' '03'}), 'unicode')  native2unicode(hex2dec({'86' '51'}), 'unicode')  native2unicode(hex2dec({'52' '1d'}), 'unicode')  native2unicode(hex2dec({'59' 'cb'}), 'unicode')  native2unicode(hex2dec({'ff' '09'}), 'unicode') ]);
+model.component('comp1').variable('var2').set('ex', 'solid.eel11', [native2unicode(hex2dec({'5f' '39'}), 'unicode')  native2unicode(hex2dec({'60' '27'}), 'unicode')  native2unicode(hex2dec({'5e' '94'}), 'unicode')  native2unicode(hex2dec({'53' 'd8'}), 'unicode')  native2unicode(hex2dec({'5f' '20'}), 'unicode')  native2unicode(hex2dec({'91' 'cf'}), 'unicode') ]);
+model.component('comp1').variable('var2').set('ey', 'solid.eel22', [native2unicode(hex2dec({'5f' '39'}), 'unicode')  native2unicode(hex2dec({'60' '27'}), 'unicode')  native2unicode(hex2dec({'5e' '94'}), 'unicode')  native2unicode(hex2dec({'53' 'd8'}), 'unicode')  native2unicode(hex2dec({'5f' '20'}), 'unicode')  native2unicode(hex2dec({'91' 'cf'}), 'unicode') ]);
+model.component('comp1').variable('var2').set('ez', 'solid.eel33', [native2unicode(hex2dec({'5f' '39'}), 'unicode')  native2unicode(hex2dec({'60' '27'}), 'unicode')  native2unicode(hex2dec({'5e' '94'}), 'unicode')  native2unicode(hex2dec({'53' 'd8'}), 'unicode')  native2unicode(hex2dec({'5f' '20'}), 'unicode')  native2unicode(hex2dec({'91' 'cf'}), 'unicode') ]);
+model.component('comp1').variable('var2').set('V1', 'intop1(COE_p2(phi))/l0+0.004-0.0000909');
+model.component('comp1').variable('var2').set('V2', 'intop2(COE_p2(phi))/l0+0.004-0.0001004');
+model.component('comp1').variable('var2').set('V3', '(V1+V2)/2');
+model.component('comp1').variable('var2').set('p1', '124.71*n1(t)/V1');
+model.component('comp1').variable('var2').set('p2', '124.71*n1(t)/V2');
+model.component('comp1').variable('var2').set('p3', '124.71*n1(t)/V3');
+model.component('comp1').variable.create('var3');
+model.component('comp1').variable('var3').set('theta', '5.5e-5*C/(5.5e-5*C+A)', [native2unicode(hex2dec({'88' '68'}), 'unicode')  native2unicode(hex2dec({'97' '62'}), 'unicode')  native2unicode(hex2dec({'6c' '22'}), 'unicode')  native2unicode(hex2dec({'79' 'bb'}), 'unicode')  native2unicode(hex2dec({'5b' '50'}), 'unicode')  native2unicode(hex2dec({'6d' '53'}), 'unicode')  native2unicode(hex2dec({'5e' 'a6'}), 'unicode')  native2unicode(hex2dec({'ff' '08'}), 'unicode')  native2unicode(hex2dec({'53' 'ea'}), 'unicode')  native2unicode(hex2dec({'67' '09'}), 'unicode')  native2unicode(hex2dec({'5f' '53'}), 'unicode') 'C' native2unicode(hex2dec({'76' '84'}), 'unicode')  native2unicode(hex2dec({'53' '55'}), 'unicode')  native2unicode(hex2dec({'4f' '4d'}), 'unicode')  native2unicode(hex2dec({'66' '2f'}), 'unicode') 'wt. ppm' native2unicode(hex2dec({'65' 'f6'}), 'unicode')  native2unicode(hex2dec({'62' '4d'}), 'unicode')  native2unicode(hex2dec({'53' 'ef'}), 'unicode')  native2unicode(hex2dec({'75' '28'}), 'unicode')  native2unicode(hex2dec({'30' '02'}), 'unicode')  native2unicode(hex2dec({'ff' '09'}), 'unicode') ]);
+model.component('comp1').variable('var3').set('sigmah', 'solid.I1s/3', [native2unicode(hex2dec({'5e' '94'}), 'unicode')  native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'7b' '2c'}), 'unicode')  native2unicode(hex2dec({'4e' '00'}), 'unicode')  native2unicode(hex2dec({'4e' '3b'}), 'unicode')  native2unicode(hex2dec({'4e' '0d'}), 'unicode')  native2unicode(hex2dec({'53' 'd8'}), 'unicode')  native2unicode(hex2dec({'91' 'cf'}), 'unicode') '/3']);
+model.component('comp1').variable('var3').set('Gct', 'Gc0*(1-chi*theta)', ['Gc(' native2unicode(hex2dec({'03' 'b8'}), 'unicode') ')']);
+
+model.component('comp1').cpl.create('intop1', 'Integration');
+model.component('comp1').cpl.create('intop2', 'Integration');
+model.component('comp1').cpl('intop1').selection.set([4]);
+model.component('comp1').cpl('intop2').selection.set([2]);
+
+model.component('comp1').physics.create('solid', 'SolidMechanics', 'geom1');
+model.component('comp1').physics('solid').feature('lemm1').create('exs1', 'ExternalStress', 2);
+model.component('comp1').physics('solid').feature('lemm1').feature('exs1').selection.set([4]);
+model.component('comp1').physics('solid').feature('lemm1').create('exs3', 'ExternalStress', 2);
+model.component('comp1').physics('solid').feature('lemm1').feature('exs3').selection.set([2]);
+model.component('comp1').physics('solid').feature('lemm1').create('exs4', 'ExternalStress', 2);
+model.component('comp1').physics('solid').feature('lemm1').feature('exs4').selection.set([5 6 7 8]);
+model.component('comp1').physics('solid').feature('lemm1').create('exs2', 'ExternalStress', 2);
+model.component('comp1').physics('solid').create('disp1', 'Displacement1', 1);
+model.component('comp1').physics('solid').feature('disp1').selection.set([1 2 3 4 5 6 8 9 10 14 15 16 17 18]);
+model.component('comp1').physics('solid').create('disp3', 'Displacement1', 1);
+model.component('comp1').physics('solid').feature('disp3').selection.set([2 7 8 9 10 11 12 13]);
+model.component('comp1').physics('solid').create('bndl1', 'BoundaryLoad', 1);
+model.component('comp1').physics('solid').feature('bndl1').selection.set([1 3 4 5 6 14 15 16 17 18]);
+model.component('comp1').physics('solid').create('bndl2', 'BoundaryLoad', 1);
+model.component('comp1').physics('solid').feature('bndl2').selection.set([2 7 8 9 10 11 12 13]);
+model.component('comp1').physics.create('hzeq', 'HelmholtzEquation', 'geom1');
+model.component('comp1').physics('hzeq').field('dimensionless').field('phi');
+model.component('comp1').physics.create('dode', 'DomainODE', 'geom1');
+model.component('comp1').physics('dode').field('dimensionless').field('H');
+model.component('comp1').physics('dode').field('dimensionless').component({'H'});
+model.component('comp1').physics('dode').prop('Units').set('DependentVariableQuantity', 'none');
+model.component('comp1').physics('dode').prop('Units').set('CustomDependentVariableUnit', 'J/m^3');
+model.component('comp1').physics('dode').create('init2', 'init', 2);
+model.component('comp1').physics('dode').feature('init2').selection.set([6 7]);
+model.component('comp1').physics.create('c', 'CoefficientFormPDE', 'geom1');
+model.component('comp1').physics('c').field('dimensionless').field('C');
+model.component('comp1').physics('c').field('dimensionless').component({'C'});
+model.component('comp1').physics('c').create('dir1', 'DirichletBoundary', 1);
+model.component('comp1').physics('c').feature('dir1').selection.set([1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18]);
+model.component('comp1').physics.create('dode2', 'DomainODE', 'geom1');
+model.component('comp1').physics('dode2').field('dimensionless').field('HStatic');
+model.component('comp1').physics('dode2').field('dimensionless').component({'HStatic'});
+model.component('comp1').physics('dode2').prop('Units').set('DependentVariableQuantity', 'pressure');
+
+model.component('comp1').mesh('mesh1').create('map1', 'Map');
+model.component('comp1').mesh('mesh1').create('ftri1', 'FreeTri');
+model.component('comp1').mesh('mesh1').feature('map1').selection.geom('geom1', 2);
+model.component('comp1').mesh('mesh1').feature('map1').selection.set([2 4 5 6 7 8]);
+model.component('comp1').mesh('mesh1').feature('map1').create('size1', 'Size');
+model.component('comp1').mesh('mesh1').feature('map1').create('size2', 'Size');
+model.component('comp1').mesh('mesh1').feature('map1').feature('size1').selection.set([5 6 8]);
+model.component('comp1').mesh('mesh1').feature('map1').feature('size2').selection.set([2 4]);
+model.component('comp1').mesh('mesh1').feature('ftri1').create('size1', 'Size');
+
+model.component('comp1').probe.create('var1', 'GlobalVariable');
+model.component('comp1').probe.create('var2', 'GlobalVariable');
+
+model.result.table('evl2').label('Evaluation 2D');
+model.result.table('evl2').comments([native2unicode(hex2dec({'4e' 'a4'}), 'unicode')  native2unicode(hex2dec({'4e' '92'}), 'unicode')  native2unicode(hex2dec({'76' '84'}), 'unicode')  native2unicode(hex2dec({'4e' '8c'}), 'unicode')  native2unicode(hex2dec({'7e' 'f4'}), 'unicode')  native2unicode(hex2dec({'50' '3c'}), 'unicode') ]);
+model.result.table('tbl1').label([native2unicode(hex2dec({'63' 'a2'}), 'unicode')  native2unicode(hex2dec({'94' '88'}), 'unicode')  native2unicode(hex2dec({'88' '68'}), 'unicode') ' 1']);
+
+model.component('comp1').variable('var1').label([native2unicode(hex2dec({'52' '1a'}), 'unicode')  native2unicode(hex2dec({'5e' 'a6'}), 'unicode')  native2unicode(hex2dec({'77' 'e9'}), 'unicode')  native2unicode(hex2dec({'96' '35'}), 'unicode') ]);
+model.component('comp1').variable('var2').label([native2unicode(hex2dec({'76' 'f8'}), 'unicode')  native2unicode(hex2dec({'57' '3a'}), 'unicode')  native2unicode(hex2dec({'53' 'd8'}), 'unicode')  native2unicode(hex2dec({'91' 'cf'}), 'unicode') ]);
+model.component('comp1').variable('var3').label([native2unicode(hex2dec({'6c' '22'}), 'unicode')  native2unicode(hex2dec({'62' '69'}), 'unicode')  native2unicode(hex2dec({'65' '63'}), 'unicode')  native2unicode(hex2dec({'53' 'd8'}), 'unicode')  native2unicode(hex2dec({'91' 'cf'}), 'unicode') ]);
+
+model.component('comp1').view('view1').axis.set('xmin', -19.93610191345215);
+model.component('comp1').view('view1').axis.set('xmax', 119.93609619140625);
+model.component('comp1').view('view1').axis.set('ymin', -16.18743133544922);
+model.component('comp1').view('view1').axis.set('ymax', 116.18743133544922);
+
+model.component('comp1').cpl('intop1').label([native2unicode(hex2dec({'88' 'c2'}), 'unicode')  native2unicode(hex2dec({'7e' 'b9'}), 'unicode')  native2unicode(hex2dec({'97' '62'}), 'unicode')  native2unicode(hex2dec({'79' 'ef'}), 'unicode')  native2unicode(hex2dec({'52' '06'}), 'unicode') ' 1']);
+model.component('comp1').cpl('intop2').label([native2unicode(hex2dec({'88' 'c2'}), 'unicode')  native2unicode(hex2dec({'7e' 'b9'}), 'unicode')  native2unicode(hex2dec({'97' '62'}), 'unicode')  native2unicode(hex2dec({'79' 'ef'}), 'unicode')  native2unicode(hex2dec({'52' '06'}), 'unicode') ' 2']);
+
+model.component('comp1').physics('solid').label([native2unicode(hex2dec({'5e' '94'}), 'unicode')  native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'5e' '94'}), 'unicode')  native2unicode(hex2dec({'53' 'd8'}), 'unicode')  native2unicode(hex2dec({'57' '3a'}), 'unicode')  native2unicode(hex2dec({'65' 'b9'}), 'unicode')  native2unicode(hex2dec({'7a' '0b'}), 'unicode') ]);
+model.component('comp1').physics('solid').prop('ShapeProperty').set('order_displacement', 1);
+model.component('comp1').physics('solid').prop('d').set('d', 'WZ');
+model.component('comp1').physics('solid').prop('StructuralTransientBehavior').set('StructuralTransientBehavior', 'Quasistatic');
+model.component('comp1').physics('solid').feature('lemm1').set('SolidModel', 'Anisotropic');
+model.component('comp1').physics('solid').feature('lemm1').set('D_mat', 'userdef');
+model.component('comp1').physics('solid').feature('lemm1').set('D', {'g1111';  ...
+'g1122';  ...
+'g1133';  ...
+'g1112';  ...
+'g1123';  ...
+'g1113';  ...
+'g1122';  ...
+'g2222';  ...
+'g2233';  ...
+'g2212';  ...
+'g2223';  ...
+'g2213';  ...
+'g1133';  ...
+'g2233';  ...
+'g3333';  ...
+'g3312';  ...
+'g3323';  ...
+'g3313';  ...
+'g1112';  ...
+'g2212';  ...
+'g3312';  ...
+'g1212';  ...
+'g1223';  ...
+'g1213';  ...
+'g1123';  ...
+'g2223';  ...
+'g3323';  ...
+'g1223';  ...
+'g2323';  ...
+'g2313';  ...
+'g1113';  ...
+'g2213';  ...
+'g3313';  ...
+'g1213';  ...
+'g2313';  ...
+'g1313'});
+model.component('comp1').physics('solid').feature('lemm1').set('rho_mat', 'userdef');
+model.component('comp1').physics('solid').feature('lemm1').set('rho', 7900);
+model.component('comp1').physics('solid').feature('lemm1').feature('exs1').set('pref', 0);
+model.component('comp1').physics('solid').feature('lemm1').feature('exs1').set('StressInputType', 'PorePressure');
+model.component('comp1').physics('solid').feature('lemm1').feature('exs1').set('pA', 'p1');
+model.component('comp1').physics('solid').feature('lemm1').feature('exs1').set('alphaB_mat', 'userdef');
+model.component('comp1').physics('solid').feature('lemm1').feature('exs1').set('alphaB', 'COE_p1(phi)');
+model.component('comp1').physics('solid').feature('lemm1').feature('exs1').label([native2unicode(hex2dec({'59' '16'}), 'unicode')  native2unicode(hex2dec({'90' 'e8'}), 'unicode')  native2unicode(hex2dec({'5e' '94'}), 'unicode')  native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'ff' '08'}), 'unicode')  native2unicode(hex2dec({'6c' '22'}), 'unicode')  native2unicode(hex2dec({'6c' '14'}), 'unicode')  native2unicode(hex2dec({'53' '8b'}), 'unicode')  native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'ff' '09'}), 'unicode') ' 1']);
+model.component('comp1').physics('solid').feature('lemm1').feature('exs3').set('pref', 0);
+model.component('comp1').physics('solid').feature('lemm1').feature('exs3').set('StressInputType', 'PorePressure');
+model.component('comp1').physics('solid').feature('lemm1').feature('exs3').set('pA', 'p2');
+model.component('comp1').physics('solid').feature('lemm1').feature('exs3').set('alphaB_mat', 'userdef');
+model.component('comp1').physics('solid').feature('lemm1').feature('exs3').set('alphaB', 'COE_p1(phi)');
+model.component('comp1').physics('solid').feature('lemm1').feature('exs3').label([native2unicode(hex2dec({'59' '16'}), 'unicode')  native2unicode(hex2dec({'90' 'e8'}), 'unicode')  native2unicode(hex2dec({'5e' '94'}), 'unicode')  native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'ff' '08'}), 'unicode')  native2unicode(hex2dec({'6c' '22'}), 'unicode')  native2unicode(hex2dec({'6c' '14'}), 'unicode')  native2unicode(hex2dec({'53' '8b'}), 'unicode')  native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'ff' '09'}), 'unicode') ' 2']);
+model.component('comp1').physics('solid').feature('lemm1').feature('exs4').set('pref', 0);
+model.component('comp1').physics('solid').feature('lemm1').feature('exs4').set('StressInputType', 'PorePressure');
+model.component('comp1').physics('solid').feature('lemm1').feature('exs4').set('pA', 'p3');
+model.component('comp1').physics('solid').feature('lemm1').feature('exs4').set('alphaB_mat', 'userdef');
+model.component('comp1').physics('solid').feature('lemm1').feature('exs4').set('alphaB', 'COE_p1(phi)');
+model.component('comp1').physics('solid').feature('lemm1').feature('exs4').label([native2unicode(hex2dec({'59' '16'}), 'unicode')  native2unicode(hex2dec({'90' 'e8'}), 'unicode')  native2unicode(hex2dec({'5e' '94'}), 'unicode')  native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'ff' '08'}), 'unicode')  native2unicode(hex2dec({'6c' '22'}), 'unicode')  native2unicode(hex2dec({'6c' '14'}), 'unicode')  native2unicode(hex2dec({'53' '8b'}), 'unicode')  native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'ff' '09'}), 'unicode') ' 3']);
+model.component('comp1').physics('solid').feature('lemm1').feature('exs2').set('Sext', {'Sh*cc*t1(t)'; '0'; '0'; '0'; 'Sv*cc*t1(t)'; '0'; '0'; '0'; 'Sn*cc*t1(t)'});
+model.component('comp1').physics('solid').feature('lemm1').feature('exs2').label([native2unicode(hex2dec({'59' '16'}), 'unicode')  native2unicode(hex2dec({'90' 'e8'}), 'unicode')  native2unicode(hex2dec({'5e' '94'}), 'unicode')  native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'ff' '08'}), 'unicode')  native2unicode(hex2dec({'8f' 'b9'}), 'unicode')  native2unicode(hex2dec({'75' '4c'}), 'unicode')  native2unicode(hex2dec({'5e' '94'}), 'unicode')  native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'ff' '09'}), 'unicode') ]);
+model.component('comp1').physics('solid').feature('disp1').set('Direction', [1; 0; 0]);
+model.component('comp1').physics('solid').feature('disp1').label([native2unicode(hex2dec({'63' '07'}), 'unicode')  native2unicode(hex2dec({'5b' '9a'}), 'unicode')  native2unicode(hex2dec({'4f' '4d'}), 'unicode')  native2unicode(hex2dec({'79' 'fb'}), 'unicode') ' x']);
+model.component('comp1').physics('solid').feature('disp3').set('Direction', [0; 1; 0]);
+model.component('comp1').physics('solid').feature('disp3').label([native2unicode(hex2dec({'63' '07'}), 'unicode')  native2unicode(hex2dec({'5b' '9a'}), 'unicode')  native2unicode(hex2dec({'4f' '4d'}), 'unicode')  native2unicode(hex2dec({'79' 'fb'}), 'unicode') ' y']);
+model.component('comp1').physics('solid').feature('bndl1').set('LoadType', 'FollowerPressure');
+model.component('comp1').physics('solid').feature('bndl1').set('FollowerPressure', '-Sh*t1(t)');
+model.component('comp1').physics('solid').feature('bndl1').label([native2unicode(hex2dec({'8f' 'b9'}), 'unicode')  native2unicode(hex2dec({'75' '4c'}), 'unicode')  native2unicode(hex2dec({'8f' '7d'}), 'unicode')  native2unicode(hex2dec({'83' '77'}), 'unicode') ' x']);
+model.component('comp1').physics('solid').feature('bndl2').set('LoadType', 'FollowerPressure');
+model.component('comp1').physics('solid').feature('bndl2').set('FollowerPressure', '-Sv*t1(t)');
+model.component('comp1').physics('solid').feature('bndl2').label([native2unicode(hex2dec({'8f' 'b9'}), 'unicode')  native2unicode(hex2dec({'75' '4c'}), 'unicode')  native2unicode(hex2dec({'8f' '7d'}), 'unicode')  native2unicode(hex2dec({'83' '77'}), 'unicode') ' y']);
+model.component('comp1').physics('hzeq').label([native2unicode(hex2dec({'76' 'f8'}), 'unicode')  native2unicode(hex2dec({'57' '3a'}), 'unicode')  native2unicode(hex2dec({'65' 'b9'}), 'unicode')  native2unicode(hex2dec({'7a' '0b'}), 'unicode') ]);
+model.component('comp1').physics('hzeq').prop('ShapeProperty').set('order', 1);
+model.component('comp1').physics('hzeq').prop('Units').set('CustomSourceTermUnit', 1);
+model.component('comp1').physics('hzeq').feature('heq1').set('c', {'l0^2' '0' '0' 'l0^2'});
+model.component('comp1').physics('hzeq').feature('heq1').set('a', '2*l0*H*(1-k)/Gct+1');
+model.component('comp1').physics('hzeq').feature('heq1').set('f', '2*H*l0*(1-k)/Gct');
+model.component('comp1').physics('dode').label([native2unicode(hex2dec({'53' '86'}), 'unicode')  native2unicode(hex2dec({'53' 'f2'}), 'unicode')  native2unicode(hex2dec({'57' '3a'}), 'unicode')  native2unicode(hex2dec({'65' 'b9'}), 'unicode')  native2unicode(hex2dec({'7a' '0b'}), 'unicode') ]);
+model.component('comp1').physics('dode').prop('ShapeProperty').set('order', 1);
+model.component('comp1').physics('dode').prop('Units').set('CustomSourceTermUnit', 'J/m^3');
+model.component('comp1').physics('dode').feature('dode1').set('f', 'H-nojac(if(fai_p>H,fai_p,H))');
+model.component('comp1').physics('dode').feature('dode1').set('da', 0);
+model.component('comp1').physics('dode').feature('init2').set('H', '0.5*B*Gct/l0*(1-(abs((X-Dd)*tan(angel)-(Y-Dd))/tan(angel))*2/l0)/tan(angel)');
+model.component('comp1').physics('c').label([native2unicode(hex2dec({'6c' '22'}), 'unicode')  native2unicode(hex2dec({'62' '69'}), 'unicode')  native2unicode(hex2dec({'65' '63'}), 'unicode')  native2unicode(hex2dec({'65' 'b9'}), 'unicode')  native2unicode(hex2dec({'7a' '0b'}), 'unicode') ]);
+model.component('comp1').physics('c').prop('ShapeProperty').set('order', 1);
+model.component('comp1').physics('c').prop('Units').set('SourceTermQuantity', 'specificdissipationrate');
+model.component('comp1').physics('c').feature('cfeq1').set('c', {'D' '0' '0' 'D'});
+model.component('comp1').physics('c').feature('cfeq1').set('f', 0);
+model.component('comp1').physics('c').feature('cfeq1').set('al', {'-J_part*HStaticx' '-J_part*HStaticy'});
+model.component('comp1').physics('c').feature('init1').set('C', 'C_ini');
+model.component('comp1').physics('c').feature('dir1').set('r', 'C_ini');
+model.component('comp1').physics('dode2').label([native2unicode(hex2dec({'97' '59'}), 'unicode')  native2unicode(hex2dec({'6c' '34'}), 'unicode')  native2unicode(hex2dec({'53' '8b'}), 'unicode')  native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'65' 'b9'}), 'unicode')  native2unicode(hex2dec({'7a' '0b'}), 'unicode') ]);
+model.component('comp1').physics('dode2').prop('ShapeProperty').set('shapeFunctionType', 'shlag');
+model.component('comp1').physics('dode2').prop('ShapeProperty').set('order', 1);
+model.component('comp1').physics('dode2').prop('Units').set('SourceTermQuantity', 'pressure');
+model.component('comp1').physics('dode2').feature('dode1').set('f', 'HStatic-sigmah');
+model.component('comp1').physics('dode2').feature('dode1').set('da', 0);
+
+model.component('comp1').mesh('mesh1').feature('size').set('hauto', 3);
+model.component('comp1').mesh('mesh1').feature('map1').feature('size1').set('custom', 'on');
+model.component('comp1').mesh('mesh1').feature('map1').feature('size1').set('hmax', 'hmax');
+model.component('comp1').mesh('mesh1').feature('map1').feature('size1').set('hmaxactive', true);
+model.component('comp1').mesh('mesh1').feature('map1').feature('size1').set('hmin', 'hmax');
+model.component('comp1').mesh('mesh1').feature('map1').feature('size1').set('hminactive', true);
+model.component('comp1').mesh('mesh1').feature('map1').feature('size2').set('custom', 'on');
+model.component('comp1').mesh('mesh1').feature('map1').feature('size2').set('hmax', 'hmax*2');
+model.component('comp1').mesh('mesh1').feature('map1').feature('size2').set('hmaxactive', true);
+model.component('comp1').mesh('mesh1').feature('map1').feature('size2').set('hmin', 'hmax');
+model.component('comp1').mesh('mesh1').feature('map1').feature('size2').set('hminactive', true);
+model.component('comp1').mesh('mesh1').feature('ftri1').feature('size1').set('custom', 'on');
+model.component('comp1').mesh('mesh1').feature('ftri1').feature('size1').set('hmax', 'hmax*4');
+model.component('comp1').mesh('mesh1').feature('ftri1').feature('size1').set('hmaxactive', true);
+model.component('comp1').mesh('mesh1').feature('ftri1').feature('size1').set('hmin', 'hmax');
+model.component('comp1').mesh('mesh1').feature('ftri1').feature('size1').set('hminactive', true);
+model.component('comp1').mesh('mesh1').run;
+
+model.component('comp1').probe('var1').set('expr', 'V1');
+model.component('comp1').probe('var1').set('unit', 'mm');
+model.component('comp1').probe('var1').set('descr', '');
+model.component('comp1').probe('var1').set('table', 'tbl1');
+model.component('comp1').probe('var1').set('window', 'window4');
+model.component('comp1').probe('var2').set('expr', 'V2');
+model.component('comp1').probe('var2').set('unit', 'mm');
+model.component('comp1').probe('var2').set('descr', '');
+model.component('comp1').probe('var2').set('table', 'tbl1');
+model.component('comp1').probe('var2').set('window', 'window4');
+
+model.study.create('std1');
+model.study('std1').create('time', 'Transient');
+
+model.sol.create('sol1');
+model.sol('sol1').study('std1');
+model.sol('sol1').attach('std1');
+model.sol('sol1').create('st1', 'StudyStep');
+model.sol('sol1').create('v1', 'Variables');
+model.sol('sol1').create('t1', 'Time');
+model.sol('sol1').feature('t1').create('d1', 'Direct');
+model.sol('sol1').feature('t1').create('se1', 'Segregated');
+model.sol('sol1').feature('t1').create('ps1', 'PreviousSolution');
+model.sol('sol1').feature('t1').feature('se1').create('ss1', 'SegregatedStep');
+model.sol('sol1').feature('t1').feature('se1').create('ss2', 'SegregatedStep');
+model.sol('sol1').feature('t1').feature('se1').create('ll1', 'LowerLimit');
+model.sol('sol1').feature('t1').feature.remove('dDef');
+model.sol('sol1').feature('t1').feature.remove('fcDef');
+
+model.result.dataset.create('cpt1', 'CutPoint2D');
+model.result.dataset.create('dset2', 'Solution');
+model.result.dataset('dset2').set('probetag', 'var2');
+model.result.numerical.create('gev1', 'EvalGlobal');
+model.result.numerical.create('gev2', 'EvalGlobal');
+model.result.numerical('gev1').set('data', 'dset2');
+model.result.numerical('gev1').set('probetag', 'var1');
+model.result.numerical('gev2').set('data', 'dset2');
+model.result.numerical('gev2').set('probetag', 'var2');
+model.result.create('pg1', 'PlotGroup2D');
+model.result.create('pg6', 'PlotGroup1D');
+model.result.create('pg11', 'PlotGroup2D');
+model.result.create('pg12', 'PlotGroup1D');
+model.result('pg1').create('surf1', 'Surface');
+model.result('pg1').feature('surf1').set('expr', 'phi');
+model.result('pg6').create('ptgr1', 'PointGraph');
+model.result('pg6').feature('ptgr1').set('expr', 'p1*COE_p(phi)');
+model.result('pg11').create('surf1', 'Surface');
+model.result('pg11').feature('surf1').set('expr', 'C');
+model.result('pg12').set('probetag', 'window4_default');
+model.result('pg12').create('tblp1', 'Table');
+model.result('pg12').feature('tblp1').set('probetag', 'var1,var2');
+model.result.export.create('anim1', 'Animation');
+model.result.export.create('anim2', 'Animation');
+model.result.export.create('anim3', 'Animation');
+model.result.export.create('anim4', 'Animation');
+
+model.component('comp1').probe('var1').genResult([]);
+model.component('comp1').probe('var2').genResult([]);
+
+model.study('std1').feature('time').set('tlist', 'range(0,2,30)');
+model.study('std1').feature('time').set('usertol', true);
+model.study('std1').feature('time').set('rtol', 0.01);
+model.study('std1').feature('time').set('plot', true);
+model.study('std1').feature('time').set('probefreq', 'tout');
+
+model.sol('sol1').attach('std1');
+model.sol('sol1').feature('st1').label([native2unicode(hex2dec({'7f' '16'}), 'unicode')  native2unicode(hex2dec({'8b' 'd1'}), 'unicode')  native2unicode(hex2dec({'65' 'b9'}), 'unicode')  native2unicode(hex2dec({'7a' '0b'}), 'unicode') ': ' native2unicode(hex2dec({'77' 'ac'}), 'unicode')  native2unicode(hex2dec({'60' '01'}), 'unicode') ]);
+model.sol('sol1').feature('v1').label([native2unicode(hex2dec({'56' 'e0'}), 'unicode')  native2unicode(hex2dec({'53' 'd8'}), 'unicode')  native2unicode(hex2dec({'91' 'cf'}), 'unicode') ' 1.1']);
+model.sol('sol1').feature('v1').set('resscalemethod', 'auto');
+model.sol('sol1').feature('v1').set('clist', {'range(0,2,30)' '0.03[s]'});
+model.sol('sol1').feature('v1').feature('comp1_u').set('scalemethod', 'manual');
+model.sol('sol1').feature('v1').feature('comp1_u').set('scaleval', '1e-2*14.142135623730951');
+model.sol('sol1').feature('t1').label([native2unicode(hex2dec({'77' 'ac'}), 'unicode')  native2unicode(hex2dec({'60' '01'}), 'unicode')  native2unicode(hex2dec({'6c' '42'}), 'unicode')  native2unicode(hex2dec({'89' 'e3'}), 'unicode')  native2unicode(hex2dec({'56' '68'}), 'unicode') ' 1.1']);
+model.sol('sol1').feature('t1').set('tlist', 'range(0,2,30)');
+model.sol('sol1').feature('t1').set('atolglobalvaluemethod', 'manual');
+model.sol('sol1').feature('t1').set('timemethod', 'genalpha');
+model.sol('sol1').feature('t1').set('initialstepgenalpha', 0.005);
+model.sol('sol1').feature('t1').set('initialstepgenalphaactive', true);
+model.sol('sol1').feature('t1').set('maxstepconstraintgenalpha', 'const');
+model.sol('sol1').feature('t1').set('maxstepgenalpha', 0.02);
+model.sol('sol1').feature('t1').set('rhoinf', 0);
+model.sol('sol1').feature('t1').set('plot', true);
+model.sol('sol1').feature('t1').set('probefreq', 'tout');
+model.sol('sol1').feature('t1').feature('aDef').label([native2unicode(hex2dec({'9a' 'd8'}), 'unicode')  native2unicode(hex2dec({'7e' 'a7'}), 'unicode') ' 1']);
+model.sol('sol1').feature('t1').feature('aDef').set('cachepattern', true);
+model.sol('sol1').feature('t1').feature('d1').label([native2unicode(hex2dec({'76' 'f4'}), 'unicode')  native2unicode(hex2dec({'63' 'a5'}), 'unicode') ]);
+model.sol('sol1').feature('t1').feature('d1').set('thresh', 0.1);
+model.sol('sol1').feature('t1').feature('d1').set('ooc', false);
+model.sol('sol1').feature('t1').feature('d1').set('rhob', 400);
+model.sol('sol1').feature('t1').feature('se1').label([native2unicode(hex2dec({'52' '06'}), 'unicode')  native2unicode(hex2dec({'79' 'bb'}), 'unicode') ' 1.1']);
+model.sol('sol1').feature('t1').feature('se1').set('maxsegiter', 1500);
+model.sol('sol1').feature('t1').feature('se1').set('segstabacc', 'segaacc');
+model.sol('sol1').feature('t1').feature('se1').set('segaaccdim', 100);
+model.sol('sol1').feature('t1').feature('se1').set('plot', true);
+model.sol('sol1').feature('t1').feature('se1').feature('ssDef').label([native2unicode(hex2dec({'52' '06'}), 'unicode')  native2unicode(hex2dec({'79' 'bb'}), 'unicode')  native2unicode(hex2dec({'6b' '65'}), 'unicode')  native2unicode(hex2dec({'9a' 'a4'}), 'unicode') ' 3']);
+model.sol('sol1').feature('t1').feature('se1').feature('ssDef').set('segvar', {'comp1_u' 'comp1_C' 'comp1_HStatic'});
+model.sol('sol1').feature('t1').feature('se1').feature('ssDef').set('subjtech', 'onevery');
+model.sol('sol1').feature('t1').feature('se1').feature('ss1').label([native2unicode(hex2dec({'52' '06'}), 'unicode')  native2unicode(hex2dec({'79' 'bb'}), 'unicode')  native2unicode(hex2dec({'6b' '65'}), 'unicode')  native2unicode(hex2dec({'9a' 'a4'}), 'unicode') ' 1.1']);
+model.sol('sol1').feature('t1').feature('se1').feature('ss1').set('segvar', {'comp1_H'});
+model.sol('sol1').feature('t1').feature('se1').feature('ss2').label([native2unicode(hex2dec({'52' '06'}), 'unicode')  native2unicode(hex2dec({'79' 'bb'}), 'unicode')  native2unicode(hex2dec({'6b' '65'}), 'unicode')  native2unicode(hex2dec({'9a' 'a4'}), 'unicode') ' 2.1']);
+model.sol('sol1').feature('t1').feature('se1').feature('ss2').set('segvar', {'comp1_phi'});
+model.sol('sol1').feature('t1').feature('se1').feature('ll1').label([native2unicode(hex2dec({'4e' '0b'}), 'unicode')  native2unicode(hex2dec({'96' '50'}), 'unicode') ' 1.1']);
+model.sol('sol1').feature('t1').feature('se1').feature('ll1').set('lowerlimit', 'comp1.H 0');
+model.sol('sol1').feature('t1').feature('ps1').label([native2unicode(hex2dec({'4e' '0a'}), 'unicode')  native2unicode(hex2dec({'4e' '00'}), 'unicode')  native2unicode(hex2dec({'4e' '2a'}), 'unicode')  native2unicode(hex2dec({'89' 'e3'}), 'unicode') ' 1.1']);
+model.sol('sol1').feature('t1').feature('ps1').set('prevcomp', {'comp1_H'});
+model.sol('sol1').runAll;
+
+model.result.dataset('cpt1').set('pointx', 'WX/2');
+model.result.dataset('cpt1').set('pointy', 'WY/2');
+model.result.dataset('dset2').label([native2unicode(hex2dec({'63' 'a2'}), 'unicode')  native2unicode(hex2dec({'94' '88'}), 'unicode')  native2unicode(hex2dec({'89' 'e3'}), 'unicode') ' 2']);
+model.result.numerical('gev1').set('const', {'solid.refpntx' '0' [native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'77' 'e9'}), 'unicode')  native2unicode(hex2dec({'8b' 'a1'}), 'unicode')  native2unicode(hex2dec({'7b' '97'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'80' '03'}), 'unicode')  native2unicode(hex2dec({'70' 'b9'}), 'unicode')  native2unicode(hex2dec({'ff' '0c'}), 'unicode') 'x ' native2unicode(hex2dec({'57' '50'}), 'unicode')  native2unicode(hex2dec({'68' '07'}), 'unicode') ]; 'solid.refpnty' '0' [native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'77' 'e9'}), 'unicode')  native2unicode(hex2dec({'8b' 'a1'}), 'unicode')  native2unicode(hex2dec({'7b' '97'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'80' '03'}), 'unicode')  native2unicode(hex2dec({'70' 'b9'}), 'unicode')  native2unicode(hex2dec({'ff' '0c'}), 'unicode') 'y ' native2unicode(hex2dec({'57' '50'}), 'unicode')  native2unicode(hex2dec({'68' '07'}), 'unicode') ]; 'solid.refpntz' '0' [native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'77' 'e9'}), 'unicode')  native2unicode(hex2dec({'8b' 'a1'}), 'unicode')  native2unicode(hex2dec({'7b' '97'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'80' '03'}), 'unicode')  native2unicode(hex2dec({'70' 'b9'}), 'unicode')  native2unicode(hex2dec({'ff' '0c'}), 'unicode') 'z ' native2unicode(hex2dec({'57' '50'}), 'unicode')  native2unicode(hex2dec({'68' '07'}), 'unicode') ]});
+model.result.numerical('gev2').set('const', {'solid.refpntx' '0' [native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'77' 'e9'}), 'unicode')  native2unicode(hex2dec({'8b' 'a1'}), 'unicode')  native2unicode(hex2dec({'7b' '97'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'80' '03'}), 'unicode')  native2unicode(hex2dec({'70' 'b9'}), 'unicode')  native2unicode(hex2dec({'ff' '0c'}), 'unicode') 'x ' native2unicode(hex2dec({'57' '50'}), 'unicode')  native2unicode(hex2dec({'68' '07'}), 'unicode') ]; 'solid.refpnty' '0' [native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'77' 'e9'}), 'unicode')  native2unicode(hex2dec({'8b' 'a1'}), 'unicode')  native2unicode(hex2dec({'7b' '97'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'80' '03'}), 'unicode')  native2unicode(hex2dec({'70' 'b9'}), 'unicode')  native2unicode(hex2dec({'ff' '0c'}), 'unicode') 'y ' native2unicode(hex2dec({'57' '50'}), 'unicode')  native2unicode(hex2dec({'68' '07'}), 'unicode') ]; 'solid.refpntz' '0' [native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'77' 'e9'}), 'unicode')  native2unicode(hex2dec({'8b' 'a1'}), 'unicode')  native2unicode(hex2dec({'7b' '97'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'80' '03'}), 'unicode')  native2unicode(hex2dec({'70' 'b9'}), 'unicode')  native2unicode(hex2dec({'ff' '0c'}), 'unicode') 'z ' native2unicode(hex2dec({'57' '50'}), 'unicode')  native2unicode(hex2dec({'68' '07'}), 'unicode') ]});
+model.result('pg1').label([native2unicode(hex2dec({'76' 'f8'}), 'unicode')  native2unicode(hex2dec({'57' '3a'}), 'unicode') 'phi']);
+model.result('pg1').set('edges', false);
+model.result('pg1').feature('surf1').set('const', {'solid.refpntx' '0' [native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'77' 'e9'}), 'unicode')  native2unicode(hex2dec({'8b' 'a1'}), 'unicode')  native2unicode(hex2dec({'7b' '97'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'80' '03'}), 'unicode')  native2unicode(hex2dec({'70' 'b9'}), 'unicode')  native2unicode(hex2dec({'ff' '0c'}), 'unicode') 'x ' native2unicode(hex2dec({'57' '50'}), 'unicode')  native2unicode(hex2dec({'68' '07'}), 'unicode') ]; 'solid.refpnty' '0' [native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'77' 'e9'}), 'unicode')  native2unicode(hex2dec({'8b' 'a1'}), 'unicode')  native2unicode(hex2dec({'7b' '97'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'80' '03'}), 'unicode')  native2unicode(hex2dec({'70' 'b9'}), 'unicode')  native2unicode(hex2dec({'ff' '0c'}), 'unicode') 'y ' native2unicode(hex2dec({'57' '50'}), 'unicode')  native2unicode(hex2dec({'68' '07'}), 'unicode') ]; 'solid.refpntz' '0' [native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'77' 'e9'}), 'unicode')  native2unicode(hex2dec({'8b' 'a1'}), 'unicode')  native2unicode(hex2dec({'7b' '97'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'80' '03'}), 'unicode')  native2unicode(hex2dec({'70' 'b9'}), 'unicode')  native2unicode(hex2dec({'ff' '0c'}), 'unicode') 'z ' native2unicode(hex2dec({'57' '50'}), 'unicode')  native2unicode(hex2dec({'68' '07'}), 'unicode') ]});
+model.result('pg1').feature('surf1').set('resolution', 'normal');
+model.result('pg6').label([native2unicode(hex2dec({'5b' '54'}), 'unicode')  native2unicode(hex2dec({'53' '8b'}), 'unicode') ]);
+model.result('pg6').set('data', 'cpt1');
+model.result('pg6').set('xlabel', [native2unicode(hex2dec({'65' 'f6'}), 'unicode')  native2unicode(hex2dec({'95' 'f4'}), 'unicode') ' (s)']);
+model.result('pg6').set('ylabel', 'p1*COE_p(phi) (MPa)');
+model.result('pg6').set('xlabelactive', false);
+model.result('pg6').set('ylabelactive', false);
+model.result('pg6').feature('ptgr1').set('const', {'solid.refpntx' '0' [native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'77' 'e9'}), 'unicode')  native2unicode(hex2dec({'8b' 'a1'}), 'unicode')  native2unicode(hex2dec({'7b' '97'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'80' '03'}), 'unicode')  native2unicode(hex2dec({'70' 'b9'}), 'unicode')  native2unicode(hex2dec({'ff' '0c'}), 'unicode') 'x ' native2unicode(hex2dec({'57' '50'}), 'unicode')  native2unicode(hex2dec({'68' '07'}), 'unicode') ]; 'solid.refpnty' '0' [native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'77' 'e9'}), 'unicode')  native2unicode(hex2dec({'8b' 'a1'}), 'unicode')  native2unicode(hex2dec({'7b' '97'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'80' '03'}), 'unicode')  native2unicode(hex2dec({'70' 'b9'}), 'unicode')  native2unicode(hex2dec({'ff' '0c'}), 'unicode') 'y ' native2unicode(hex2dec({'57' '50'}), 'unicode')  native2unicode(hex2dec({'68' '07'}), 'unicode') ]; 'solid.refpntz' '0' [native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'77' 'e9'}), 'unicode')  native2unicode(hex2dec({'8b' 'a1'}), 'unicode')  native2unicode(hex2dec({'7b' '97'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'80' '03'}), 'unicode')  native2unicode(hex2dec({'70' 'b9'}), 'unicode')  native2unicode(hex2dec({'ff' '0c'}), 'unicode') 'z ' native2unicode(hex2dec({'57' '50'}), 'unicode')  native2unicode(hex2dec({'68' '07'}), 'unicode') ]});
+model.result('pg6').feature('ptgr1').set('linewidth', 2);
+model.result('pg6').feature('ptgr1').set('linewidthslider', 2);
+model.result('pg11').label('C');
+model.result('pg11').set('looplevel', [2]);
+model.result('pg11').set('edges', false);
+model.result('pg11').feature('surf1').set('const', {'solid.refpntx' '0' [native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'77' 'e9'}), 'unicode')  native2unicode(hex2dec({'8b' 'a1'}), 'unicode')  native2unicode(hex2dec({'7b' '97'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'80' '03'}), 'unicode')  native2unicode(hex2dec({'70' 'b9'}), 'unicode')  native2unicode(hex2dec({'ff' '0c'}), 'unicode') 'x ' native2unicode(hex2dec({'57' '50'}), 'unicode')  native2unicode(hex2dec({'68' '07'}), 'unicode') ]; 'solid.refpnty' '0' [native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'77' 'e9'}), 'unicode')  native2unicode(hex2dec({'8b' 'a1'}), 'unicode')  native2unicode(hex2dec({'7b' '97'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'80' '03'}), 'unicode')  native2unicode(hex2dec({'70' 'b9'}), 'unicode')  native2unicode(hex2dec({'ff' '0c'}), 'unicode') 'y ' native2unicode(hex2dec({'57' '50'}), 'unicode')  native2unicode(hex2dec({'68' '07'}), 'unicode') ]; 'solid.refpntz' '0' [native2unicode(hex2dec({'52' '9b'}), 'unicode')  native2unicode(hex2dec({'77' 'e9'}), 'unicode')  native2unicode(hex2dec({'8b' 'a1'}), 'unicode')  native2unicode(hex2dec({'7b' '97'}), 'unicode')  native2unicode(hex2dec({'53' 'c2'}), 'unicode')  native2unicode(hex2dec({'80' '03'}), 'unicode')  native2unicode(hex2dec({'70' 'b9'}), 'unicode')  native2unicode(hex2dec({'ff' '0c'}), 'unicode') 'z ' native2unicode(hex2dec({'57' '50'}), 'unicode')  native2unicode(hex2dec({'68' '07'}), 'unicode') ]});
+model.result('pg11').feature('surf1').set('rangecoloractive', true);
+model.result('pg11').feature('surf1').set('rangecolormin', 0.5);
+model.result('pg11').feature('surf1').set('rangecolormax', 0.5004);
+model.result('pg11').feature('surf1').set('colortable', 'Prism');
+model.result('pg11').feature('surf1').set('resolution', 'normal');
+model.result('pg12').label([native2unicode(hex2dec({'63' 'a2'}), 'unicode')  native2unicode(hex2dec({'94' '88'}), 'unicode')  native2unicode(hex2dec({'7e' 'd8'}), 'unicode')  native2unicode(hex2dec({'56' 'fe'}), 'unicode')  native2unicode(hex2dec({'7e' 'c4'}), 'unicode') ' 12']);
+model.result('pg12').set('xlabel', [native2unicode(hex2dec({'65' 'f6'}), 'unicode')  native2unicode(hex2dec({'95' 'f4'}), 'unicode') ' (s)']);
+model.result('pg12').set('windowtitle', [native2unicode(hex2dec({'63' 'a2'}), 'unicode')  native2unicode(hex2dec({'94' '88'}), 'unicode')  native2unicode(hex2dec({'56' 'fe'}), 'unicode')  native2unicode(hex2dec({'20' '1c'}), 'unicode') '4' native2unicode(hex2dec({'20' '1d'}), 'unicode') ]);
+model.result('pg12').set('xlabelactive', false);
+model.result('pg12').create('tblp1', 'Table');
+model.result('pg12').feature('tblp1').label([native2unicode(hex2dec({'63' 'a2'}), 'unicode')  native2unicode(hex2dec({'94' '88'}), 'unicode')  native2unicode(hex2dec({'88' '68'}), 'unicode')  native2unicode(hex2dec({'56' 'fe'}), 'unicode') ' 1']);
+model.result('pg12').feature('tblp1').set('table', 'tbl1');
+model.result('pg12').feature('tblp1').set('plotcolumninput', 'manual');
+model.result('pg12').feature('tblp1').set('legend', true);
+model.result('pg12').feature.remove('tblp2');
+model.result.export('anim1').label([native2unicode(hex2dec({'76' 'f8'}), 'unicode')  native2unicode(hex2dec({'57' '3a'}), 'unicode') ]);
+model.result.export('anim1').set('target', 'player');
+model.result.export('anim1').set('solnumtype', 'inner');
+model.result.export('anim1').set('solnum', [1]);
+model.result.export('anim1').set('framesel', 'all');
+model.result.export('anim1').set('showframe', 201);
+model.result.export('anim1').set('shownparameter', '10');
+model.result.export('anim1').set('logo2d', true);
+model.result.export('anim1').set('fontsize', '9');
+model.result.export('anim1').set('colortheme', 'globaltheme');
+model.result.export('anim1').set('customcolor', [1 1 1]);
+model.result.export('anim1').set('background', 'current');
+model.result.export('anim1').set('gltfincludelines', 'on');
+model.result.export('anim1').set('title1d', 'on');
+model.result.export('anim1').set('legend1d', 'on');
+model.result.export('anim1').set('logo1d', 'on');
+model.result.export('anim1').set('options1d', 'on');
+model.result.export('anim1').set('title2d', 'on');
+model.result.export('anim1').set('legend2d', 'on');
+model.result.export('anim1').set('logo2d', 'on');
+model.result.export('anim1').set('options2d', 'off');
+model.result.export('anim1').set('title3d', 'on');
+model.result.export('anim1').set('legend3d', 'on');
+model.result.export('anim1').set('logo3d', 'on');
+model.result.export('anim1').set('options3d', 'off');
+model.result.export('anim1').set('axisorientation', 'on');
+model.result.export('anim1').set('grid', 'on');
+model.result.export('anim1').set('axes1d', 'on');
+model.result.export('anim1').set('axes2d', 'off');
+model.result.export('anim1').set('showgrid', 'on');
+model.result.export('anim2').set('giffilename', ['E:\01' native2unicode(hex2dec({'6c' '22'}), 'unicode')  native2unicode(hex2dec({'81' '06'}), 'unicode') '\' native2unicode(hex2dec({'6a' '21'}), 'unicode')  native2unicode(hex2dec({'57' '8b'}), 'unicode') '\07 20mmol' native2unicode(hex2dec({'6a' '21'}), 'unicode')  native2unicode(hex2dec({'57' '8b'}), 'unicode') '+\' native2unicode(hex2dec({'62' '98'}), 'unicode')  native2unicode(hex2dec({'7e' 'bf'}), 'unicode') '\Untitled.gif']);
+model.result.export('anim2').set('solnumtype', 'inner');
+model.result.export('anim2').set('solnum', [1]);
+model.result.export('anim2').set('maxframes', 60);
+model.result.export('anim2').set('width', 480);
+model.result.export('anim2').set('fontsize', '9');
+model.result.export('anim2').set('colortheme', 'globaltheme');
+model.result.export('anim2').set('customcolor', [1 1 1]);
+model.result.export('anim2').set('background', 'current');
+model.result.export('anim2').set('gltfincludelines', 'on');
+model.result.export('anim2').set('title1d', 'on');
+model.result.export('anim2').set('legend1d', 'on');
+model.result.export('anim2').set('logo1d', 'on');
+model.result.export('anim2').set('options1d', 'on');
+model.result.export('anim2').set('title2d', 'on');
+model.result.export('anim2').set('legend2d', 'on');
+model.result.export('anim2').set('logo2d', 'off');
+model.result.export('anim2').set('options2d', 'off');
+model.result.export('anim2').set('title3d', 'on');
+model.result.export('anim2').set('legend3d', 'on');
+model.result.export('anim2').set('logo3d', 'on');
+model.result.export('anim2').set('options3d', 'off');
+model.result.export('anim2').set('axisorientation', 'on');
+model.result.export('anim2').set('grid', 'on');
+model.result.export('anim2').set('axes1d', 'on');
+model.result.export('anim2').set('axes2d', 'off');
+model.result.export('anim2').set('showgrid', 'on');
+model.result.export('anim3').set('giffilename', ['E:\01' native2unicode(hex2dec({'6c' '22'}), 'unicode')  native2unicode(hex2dec({'81' '06'}), 'unicode') '\' native2unicode(hex2dec({'6a' '21'}), 'unicode')  native2unicode(hex2dec({'57' '8b'}), 'unicode') '\07 20mmol' native2unicode(hex2dec({'6a' '21'}), 'unicode')  native2unicode(hex2dec({'57' '8b'}), 'unicode') '+\' native2unicode(hex2dec({'62' '98'}), 'unicode')  native2unicode(hex2dec({'7e' 'bf'}), 'unicode') '\Untitled.gif']);
+model.result.export('anim3').set('solnumtype', 'inner');
+model.result.export('anim3').set('solnum', [1]);
+model.result.export('anim3').set('maxframes', 60);
+model.result.export('anim3').set('width', 480);
+model.result.export('anim3').set('fontsize', '9');
+model.result.export('anim3').set('colortheme', 'globaltheme');
+model.result.export('anim3').set('customcolor', [1 1 1]);
+model.result.export('anim3').set('background', 'current');
+model.result.export('anim3').set('gltfincludelines', 'on');
+model.result.export('anim3').set('title1d', 'on');
+model.result.export('anim3').set('legend1d', 'on');
+model.result.export('anim3').set('logo1d', 'on');
+model.result.export('anim3').set('options1d', 'on');
+model.result.export('anim3').set('title2d', 'on');
+model.result.export('anim3').set('legend2d', 'on');
+model.result.export('anim3').set('logo2d', 'off');
+model.result.export('anim3').set('options2d', 'off');
+model.result.export('anim3').set('title3d', 'on');
+model.result.export('anim3').set('legend3d', 'on');
+model.result.export('anim3').set('logo3d', 'on');
+model.result.export('anim3').set('options3d', 'off');
+model.result.export('anim3').set('axisorientation', 'on');
+model.result.export('anim3').set('grid', 'on');
+model.result.export('anim3').set('axes1d', 'on');
+model.result.export('anim3').set('axes2d', 'off');
+model.result.export('anim3').set('showgrid', 'on');
+model.result.export('anim4').set('plotgroup', 'pg11');
+model.result.export('anim4').set('giffilename', ['E:\01' native2unicode(hex2dec({'6c' '22'}), 'unicode')  native2unicode(hex2dec({'81' '06'}), 'unicode') '\' native2unicode(hex2dec({'6a' '21'}), 'unicode')  native2unicode(hex2dec({'57' '8b'}), 'unicode') '\' native2unicode(hex2dec({'7b' '2c'}), 'unicode') '2' native2unicode(hex2dec({'90' 'e8'}), 'unicode')  native2unicode(hex2dec({'52' '06'}), 'unicode') '\03 ' native2unicode(hex2dec({'88' 'c2'}), 'unicode')  native2unicode(hex2dec({'7e' 'b9'}), 'unicode')  native2unicode(hex2dec({'89' 'd2'}), 'unicode')  native2unicode(hex2dec({'5e' 'a6'}), 'unicode')  native2unicode(hex2dec({'6a' '21'}), 'unicode')  native2unicode(hex2dec({'57' '8b'}), 'unicode') '\60C.gif']);
+model.result.export('anim4').set('fps', 25);
+model.result.export('anim4').set('framesel', 'all');
+model.result.export('anim4').set('width', 480);
+model.result.export('anim4').set('fontsize', '9');
+model.result.export('anim4').set('colortheme', 'globaltheme');
+model.result.export('anim4').set('customcolor', [1 1 1]);
+model.result.export('anim4').set('background', 'current');
+model.result.export('anim4').set('gltfincludelines', 'on');
+model.result.export('anim4').set('title1d', 'on');
+model.result.export('anim4').set('legend1d', 'on');
+model.result.export('anim4').set('logo1d', 'on');
+model.result.export('anim4').set('options1d', 'on');
+model.result.export('anim4').set('title2d', 'on');
+model.result.export('anim4').set('legend2d', 'on');
+model.result.export('anim4').set('logo2d', 'off');
+model.result.export('anim4').set('options2d', 'off');
+model.result.export('anim4').set('title3d', 'on');
+model.result.export('anim4').set('legend3d', 'on');
+model.result.export('anim4').set('logo3d', 'on');
+model.result.export('anim4').set('options3d', 'off');
+model.result.export('anim4').set('axisorientation', 'on');
+model.result.export('anim4').set('grid', 'on');
+model.result.export('anim4').set('axes1d', 'on');
+model.result.export('anim4').set('axes2d', 'off');
+model.result.export('anim4').set('showgrid', 'on');
+
+out = model;
